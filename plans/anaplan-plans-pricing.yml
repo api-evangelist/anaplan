@@ -1,0 +1,102 @@
+specification: API Commons Plans 0.1
+provider: Anaplan
+providerId: anaplan
+created: 2026-06-12
+modified: 2026-06-12
+reconciled: true
+url: https://www.anaplan.com/platform/
+description: >
+  Anaplan does not publish self-serve pricing publicly. All plans require
+  contacting sales for a custom quote. Pricing is based on a SaaS subscription
+  model combining platform access, named user licenses, and specific planning
+  application modules. Typical enterprise engagements start at $30K–$50K/year
+  for smaller deployments and scale to $1M+/year for large global rollouts.
+
+plans:
+  - name: Professional
+    description: >
+      Entry-level subscription for mid-market organizations deploying one
+      or two planning use cases with a limited user base.
+    type: paid
+    contactSales: true
+    estimatedStartingPrice:
+      amount: 30000
+      currency: USD
+      period: annual
+    quotas:
+      - metric: users
+        type: quota
+        limit: null
+        notes: Licensed per named user; exact count defined in contract
+      - metric: workspaces
+        type: quota
+        limit: 1
+        notes: Typically one production workspace for entry-level tier
+      - metric: models
+        type: quota
+        limit: null
+        notes: Model count defined by contract scope
+    features:
+      - Integration API v2.0 access
+      - Standard planning applications (1-2 modules)
+      - Email support
+
+  - name: Enterprise
+    description: >
+      Full-featured enterprise subscription for large organizations deploying
+      multiple planning applications across finance, supply chain, and sales.
+    type: enterprise
+    contactSales: true
+    estimatedStartingPrice:
+      amount: 150000
+      currency: USD
+      period: annual
+    quotas:
+      - metric: users
+        type: quota
+        limit: null
+        notes: Volume-based named user licensing; discounts for large user counts
+      - metric: workspaces
+        type: quota
+        limit: null
+        notes: Multiple workspaces including dev, test, and production
+      - metric: api_requests_per_minute
+        type: quota
+        limit: 600
+        notes: 600 requests per minute at tenant level (token bucket algorithm)
+    features:
+      - All Integration APIs (v2.0, Financial Consolidation, SCIM, CloudWorks, Audit, ALM)
+      - Unlimited planning applications
+      - Custom integrations via CloudWorks
+      - SCIM identity provisioning
+      - Audit API and SIEM integration
+      - Dedicated customer success manager
+      - SLA-backed uptime guarantee
+      - Priority support
+
+  - name: Enterprise Plus
+    description: >
+      Top-tier subscription for global enterprises with complex multi-entity
+      planning requirements, high user counts, and advanced consolidation needs.
+    type: enterprise
+    contactSales: true
+    estimatedStartingPrice:
+      amount: 500000
+      currency: USD
+      period: annual
+    quotas:
+      - metric: users
+        type: quota
+        limit: null
+        notes: 1,000+ users; enterprise volume licensing
+      - metric: api_requests_per_minute
+        type: quota
+        limit: 600
+        notes: Standard 600 RPM limit applies; custom limits may be negotiated
+    features:
+      - All Enterprise features
+      - Financial Consolidation API
+      - Application Lifecycle Management API
+      - Multi-entity consolidation workflows
+      - Dedicated implementation support
+      - Custom SLA terms

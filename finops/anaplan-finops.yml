@@ -1,0 +1,91 @@
+specification: FinOps Framework 1.0
+provider: Anaplan
+providerId: anaplan
+created: 2026-06-12
+modified: 2026-06-12
+url: https://www.anaplan.com/platform/
+description: >
+  Anaplan is an enterprise SaaS platform priced via annual subscription contracts
+  negotiated directly with sales. There is no self-serve or consumption-based billing.
+  Cost visibility and optimization are achieved through contract negotiation, user
+  license management, and right-sizing application module subscriptions to actual
+  planning use case requirements.
+
+billingModel: subscription
+billingCadence: annual
+selfServe: false
+publicPricing: false
+contactSalesRequired: true
+currencySupported:
+  - USD
+  - EUR
+
+focusColumns:
+  - ProviderName: Anaplan
+  - ServiceName: Connected Planning Platform
+  - ServiceCategory: Business Applications / Enterprise Planning
+  - ChargeType: Recurring
+  - BillingPeriod: Annual
+  - PricingUnit: Named User / Module / Workspace
+  - Region: Global (multi-region cloud)
+
+meters:
+  - name: Named User Licenses
+    description: >
+      Per-seat licensing for end users who access Anaplan planning models.
+      Volume discounts apply for large user counts negotiated at contract time.
+    unit: user_seat
+    pricingModel: per_unit
+    publicRate: false
+    notes: Typically negotiated at $2,000–$10,000 per user per year depending on tier
+
+  - name: Planning Application Modules
+    description: >
+      Each planning domain (Financial Planning, Supply Chain, Sales Performance
+      Management, etc.) is licensed as a separate application module add-on.
+    unit: module
+    pricingModel: per_unit
+    publicRate: false
+    notes: Per-module cost negotiated at contract; multi-module bundles available
+
+  - name: Platform Base Fee
+    description: >
+      Core platform fee covering infrastructure, modeling engine, data integration
+      capabilities, and standard support included in all subscription tiers.
+    unit: tenant
+    pricingModel: flat_rate
+    publicRate: false
+    notes: Baseline platform access fee, typically $30K–$150K/year for base tier
+
+  - name: Implementation Services
+    description: >
+      Professional services fees for initial deployment, configuration, and
+      training. Separate from the SaaS subscription.
+    unit: engagement
+    pricingModel: project_based
+    publicRate: false
+    notes: Range from $50K (single-function) to $250K+ (enterprise-wide rollout)
+
+principles:
+  Visibility:
+    description: >
+      Anaplan costs are captured at the contract level. Organizations should
+      track named user allocations versus actual active users and map module
+      licenses to active business use cases for full spend visibility.
+    recommendations:
+      - Audit named user licenses quarterly and reclaim unused seats before renewal
+      - Map each licensed application module to measurable business outcomes
+      - Request itemized invoicing per module and workspace from Anaplan account team
+      - Track implementation and professional services spend separately from SaaS fees
+
+  Optimization:
+    description: >
+      Cost optimization centers on right-sizing the number of user licenses,
+      limiting module sprawl, and negotiating multi-year contract discounts.
+    recommendations:
+      - Consolidate redundant planning models to reduce workspace overhead
+      - Negotiate 2–3 year contracts for 10–20% cost reduction versus annual terms
+      - Bundle multiple planning modules at contract time for volume pricing
+      - Leverage annual price increase caps (typically 3–5%) as a negotiation lever
+      - Decommission unused or low-adoption modules at renewal
+      - Use CloudWorks for integrations to avoid additional third-party ETL licensing

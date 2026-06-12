@@ -1,0 +1,60 @@
+specification: API Commons Rate Limits 0.1
+provider: Anaplan
+providerId: anaplan
+created: 2026-06-12
+modified: 2026-06-12
+url: https://help.anaplan.com/integration-api-v20-399496b0-d66e-4a84-895a-8d1ffdee2e6b
+description: >
+  Anaplan enforces rate limiting at the tenant level using a token bucket
+  algorithm. All workspaces within a single tenant share the same rate limit
+  pool. When the limit is exceeded, the API returns HTTP 429 Too Many Requests.
+  Clients should implement exponential backoff and respect the Retry-After header.
+
+throttled:
+  httpStatusCode: 429
+  description: Too Many Requests — tenant-level token bucket exhausted
+  headers:
+    - name: Retry-After
+      description: >
+        Number of seconds the client should wait before retrying.
+        Returned when a 429 response is issued.
+      required: false
+
+algorithm: token_bucket
+description: >
+  The token bucket algorithm allows bursting up to the bucket capacity of 600
+  tokens. Each API request consumes one token. Tokens are replenished at a rate
+  of 10 tokens per second. When the bucket is empty, further requests are denied
+  with HTTP 429 until tokens are replenished.
+
+limits:
+  - scope: tenant
+    metric: requests
+    limit: 600
+    timeFrame: per_minute
+    notes: >
+      Equivalent to 10 requests per second. Applies across all workspaces in a
+      single tenant. This is the primary enforced limit for the Integration API v2.0.
+
+  - scope: tenant
+    metric: concurrent_imports
+    limit: null
+    timeFrame: per_workspace
+    notes: >
+      Anaplan limits the number of simultaneous import/export operations per
+      workspace; exact concurrency limits are not publicly documented and may
+      vary by workspace size and subscription tier.
+
+  - scope: request
+    metric: payload_size
+    limit: null
+    timeFrame: per_request
+    notes: >
+      Large file imports are handled via chunked upload. File chunk sizes and
+      maximum payload sizes are defined in the Integration API documentation.
+
+recommendations:
+  - Implement exponential backoff with jitter when receiving HTTP 429 responses
+  - Batch bulk operations using chunked imports to reduce individual request count
+  - Monitor tenant-level consumption across all integrations to avoid contention
+  - Use the CloudWorks scheduler for off-peak batch operations where possible
