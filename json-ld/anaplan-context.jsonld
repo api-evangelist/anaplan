@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "anaplan": "https://www.anaplan.com/vocab#",
+    "apiBaseURL": "https://api.anaplan.com",
+    "authBaseURL": "https://auth.anaplan.com",
+
+    "ConnectedPlanningPlatform": "anaplan:ConnectedPlanningPlatform",
+    "PlanningModel": "anaplan:PlanningModel",
+    "Workspace": "anaplan:Workspace",
+    "Module": "anaplan:Module",
+    "List": "anaplan:List",
+    "View": "anaplan:View",
+    "Import": "anaplan:Import",
+    "Export": "anaplan:Export",
+    "Action": "anaplan:Action",
+    "Process": "anaplan:Process",
+    "File": "anaplan:File",
+    "Dimension": "anaplan:Dimension",
+    "LineItem": "anaplan:LineItem",
+
+    "financialConsolidation": "anaplan:financialConsolidation",
+    "ConsolidationGroup": "anaplan:ConsolidationGroup",
+    "ConsolidationEntity": "anaplan:ConsolidationEntity",
+    "Intercompany": "anaplan:Intercompany",
+    "JournalEntry": "anaplan:JournalEntry",
+
+    "ScimUser": "anaplan:ScimUser",
+    "ScimGroup": "anaplan:ScimGroup",
+    "IdentityProvider": "anaplan:IdentityProvider",
+
+    "CloudWorksIntegration": "anaplan:CloudWorksIntegration",
+    "Connection": "anaplan:Connection",
+    "Schedule": "anaplan:Schedule",
+
+    "AuditEvent": "anaplan:AuditEvent",
+    "SecurityAlert": "anaplan:SecurityAlert",
+    "SiemStream": "anaplan:SiemStream",
+
+    "AuthToken": "anaplan:AuthToken",
+    "Certificate": "anaplan:Certificate",
+    "TokenRefresh": "anaplan:TokenRefresh",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+    "provider": {
+      "@id": "schema:provider",
+      "@type": "@id"
+    },
+    "api": {
+      "@id": "schema:mainEntityOfPage",
+      "@type": "@id"
+    }
+  },
+  "@type": "Organization",
+  "name": "Anaplan",
+  "url": "https://www.anaplan.com",
+  "description": "Cloud-native connected planning platform for enterprise FP&A, supply chain planning, and sales performance management.",
+  "api": [
+    {
+      "@type": "WebAPI",
+      "name": "Anaplan Integration API v2.0",
+      "url": "https://api.anaplan.com/2/0",
+      "description": "RESTful bulk and transactional API for importing data, exporting results, running processes, and managing models."
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Anaplan Authentication Service API",
+      "url": "https://auth.anaplan.com",
+      "description": "Token issuance and refresh for Anaplan API access via username/password or client certificate."
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Anaplan Financial Consolidation API",
+      "url": "https://api.anaplan.com",
+      "description": "Controls consolidation workflows and manages financial data and metadata."
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Anaplan SCIM API",
+      "url": "https://api.anaplan.com/scim/2/0",
+      "description": "System for Cross-Domain Identity Management for user provisioning across Anaplan."
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Anaplan CloudWorks API",
+      "url": "https://api.anaplan.com",
+      "description": "Custom connections and integrations between Anaplan and external data sources."
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Anaplan Audit API",
+      "url": "https://api.anaplan.com",
+      "description": "Audit event streaming and security alert integration for SIEM services."
+    }
+  ]
+}

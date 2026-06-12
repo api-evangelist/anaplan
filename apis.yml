@@ -129,6 +129,8 @@ common:
     url: https://www.linkedin.com/company/anaplan
   - type: Blog
     url: https://www.anaplan.com/blog/
+  - type: BlogFeed
+    url: blogs/blogs.json
   - type: Pricing
     url: https://www.anaplan.com/platform/
   - type: StatusPage
@@ -141,6 +143,8 @@ common:
     url: rate-limits/anaplan-rate-limits.yml
   - type: FinOps
     url: finops/anaplan-finops.yml
+  - type: JsonLdContext
+    url: json-ld/anaplan-context.jsonld
 
 maintainers:
   - FN: Kin Lane

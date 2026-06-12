@@ -1,0 +1,9 @@
+{
+  "name": "Anaplan Blog",
+  "description": "Blog posts from Anaplan covering connected planning, FP&A, supply chain, and enterprise planning topics.",
+  "url": "https://www.anaplan.com/blog/",
+  "rssUrl": null,
+  "rssConfirmed": false,
+  "notes": "No RSS/Atom feed discovered on https://www.anaplan.com/blog/ as of 2026-06-12. Page uses dynamic load-more pagination without an exposed feed endpoint.",
+  "posts": []
+}
