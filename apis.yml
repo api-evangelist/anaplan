@@ -143,7 +143,7 @@ common:
     url: rate-limits/anaplan-rate-limits.yml
   - type: FinOps
     url: finops/anaplan-finops.yml
-  - type: JsonLdContext
+  - type: JSONLDContext
     url: json-ld/anaplan-context.jsonld
 
 maintainers:

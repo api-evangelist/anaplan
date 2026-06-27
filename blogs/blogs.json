@@ -4,22 +4,23 @@
   "url": "https://www.anaplan.com/blog/",
   "rssUrl": null,
   "rssConfirmed": false,
-  "notes": "No RSS/Atom feed discovered on https://www.anaplan.com/blog/ as of 2026-06-12. Page uses dynamic load-more pagination without an exposed feed endpoint.",
+  "notes": "No RSS/Atom feed discovered on https://www.anaplan.com/blog/ (all /feed/, /rss/, /feed.xml, /atom.xml, /index.xml, /rss.xml paths return 404). Posts pulled via HTML scraping of the blog listing page; the page does not expose publish dates, so saved posts use date:\"\" and the 0000-00-00- filename prefix.",
   "posts": [],
   "repo": "anaplan",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/anaplan",
-      "error": "HTTPError"
+      "source": "https://www.anaplan.com/blog/",
+      "feed_url": "",
+      "saved": 0,
+      "method": "agent-scrape",
+      "error": "listing page exposes no publish dates; cannot place posts in window without fabricating dates"
     },
     {
-      "source": "https://www.anaplan.com/blog/",
-      "feed_url": "https://www.anaplan.com/blog/",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "source": "https://www.linkedin.com/company/anaplan",
+      "error": "HTTPError"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 10,
+  "fetched": "2026-06-27T12:23:20Z",
+  "agent_pulled": "2026-06-27"
 }
