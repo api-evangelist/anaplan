@@ -119,6 +119,10 @@ apis:
         url: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
 
 common:
+  - type: TrustCenter
+    url: security/anaplan-trust-center.yml
+  - type: DomainSecurity
+    url: security/anaplan-domain-security.yml
   - type: Website
     url: https://www.anaplan.com
   - type: Documentation
