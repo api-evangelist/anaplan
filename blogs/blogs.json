@@ -9,18 +9,21 @@
   "repo": "anaplan",
   "feeds": [
     {
-      "source": "https://www.anaplan.com/blog/",
-      "feed_url": "",
+      "source": "https://www.linkedin.com/company/anaplan",
+      "feed_url": "https://www.linkedin.com/company/anaplan",
+      "title": "",
       "saved": 0,
-      "method": "agent-scrape",
-      "error": "listing page exposes no publish dates; cannot place posts in window without fabricating dates"
+      "method": "none"
     },
     {
-      "source": "https://www.linkedin.com/company/anaplan",
-      "error": "HTTPError"
+      "source": "https://www.anaplan.com/blog/",
+      "feed_url": "https://www.anaplan.com/blog/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-06-27T12:23:20Z",
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "agent_pulled": "2026-07-04"
 }
