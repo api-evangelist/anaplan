@@ -17,7 +17,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anaplan.pn
 url: https://raw.githubusercontent.com/api-evangelist/anaplan/refs/heads/main/apis.yml
 created: 2026-06-12
 modified: 2026-06-12
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >
   Anaplan is a cloud-native connected planning platform used by enterprises for
   financial planning and analysis (FP&A), supply chain planning, and sales performance
