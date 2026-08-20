@@ -64,6 +64,9 @@ apis:
     baseURL: https://auth.anaplan.com
     tags:
       - Authentication
+      - Tokens
+    tags_raw:
+      - Authentication
       - OAuth
       - Tokens
     properties:
@@ -108,6 +111,10 @@ apis:
     humanURL: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
     baseURL: https://api.anaplan.com
     tags:
+      - CloudWorks
+      - Integration
+      - Connectors
+    tags_raw:
       - CloudWorks
       - Integrations
       - Connectors
