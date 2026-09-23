@@ -1,0 +1,32 @@
+# Front Door AI Index — anaplan — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: anaplan
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.anaplan.com
+  final_host: www.anaplan.com
+  ownership: own
+  owner: anaplan
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 55
+  host_score: 55
+  density: 26.51
+  words: 2075
+  tiers:
+    agentic: 14
+    core: 41
+    model: 0
+  ambiguous: 19
+  top_terms:
+    AI: 39
+    agent: 10
+    intelligence: 8
+    AI agent: 7
+    agentic: 7
+    LLMs: 1
+    ML: 1
+    predictive: 1
