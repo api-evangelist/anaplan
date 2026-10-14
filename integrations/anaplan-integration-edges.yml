@@ -3,6 +3,8 @@ method: searched
 checked:
 - https://aws.amazon.com/marketplace/
 - https://azuremarketplace.microsoft.com/
+- https://fivetran.com/docs/activations/destinations/available-destinations/anaplan
+- https://hightouch.com/docs/destinations/anaplan
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -50,3 +52,48 @@ edges:
   seller_name: Anaplan Inc
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: Hightouch
+  partner: hightouch
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://hightouch.com/docs/destinations/anaplan
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - anaplan
+      status: released
+      sync_types:
+      - Records
+      sync_modes:
+      - all
+      - insert
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+- partner_name: Census
+  partner: getcensus
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://fivetran.com/docs/activations/destinations/available-destinations/anaplan
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - anaplan
+      sync_behaviours:
+      - delete
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+source:
+- https://fivetran.com/docs/activations/destinations/available-destinations/anaplan
+- https://hightouch.com/docs/destinations/anaplan
