@@ -100,7 +100,7 @@
     - connectors/applications/anaplan
     vendor_link: https://www.anaplan.com/
     builder: Fivetran
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: anaplan-meltano
   label: Meltano
@@ -132,5 +132,5 @@
     - silver
     - unknown
     builder: 'community (Meltano Hub variant maintainers: kdamodaran1, matthew-skinner)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
