@@ -108,6 +108,10 @@ apis:
     baseURL: https://api.anaplan.com/scim/2/0
     tags:
       - SCIM
+      - Identity and Access Management
+      - Provisioning
+    tags_raw:
+      - SCIM
       - Identity Management
       - Provisioning
     properties:
