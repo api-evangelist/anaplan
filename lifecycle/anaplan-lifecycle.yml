@@ -1,0 +1,9 @@
+name: Anaplan lifecycle
+generated: '2026-10-20'
+method: searched
+source: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
+versioning: URL-path versioning; Integration API v2.0 at https://api.anaplan.com/2/0, SCIM at https://api.anaplan.com/scim/1/0/v2, Administration at https://api.anaplan.com/admin/1/0.
+stability: 'Only APIs published in our official documentation are considered stable and supported. Any APIs not included in the documentation are subject to change without notice and are not covered by our support or backward compatibility guarantees.'
+deprecation: null
+deprecation_note: No deprecation policy or Sunset/Deprecation header documented. The legacy Apiary page anaplanbulkapi20.docs.apiary.io carries the notice "This page has been deprecated" and points to anaplan.docs.apiary.io.
+status_page: https://status.anaplan.com/

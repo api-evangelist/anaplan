@@ -1,0 +1,16 @@
+name: Anaplan authentication
+generated: '2026-10-20'
+method: searched
+source: https://anaplanauthentication.docs.apiary.io/
+docs: https://help.anaplan.com/authentication-service-api-4060eddf-fe4e-4220-96f6-267d54502ed6
+token_endpoint: https://auth.anaplan.com/token/authenticate
+schemes:
+- type: http
+  scheme: basic
+  description: Username and password sent as Basic auth to POST /token/authenticate to obtain an Anaplan auth token.
+- type: apiKey
+  in: header
+  name: Authorization
+  description: 'All API calls send "Authorization: AnaplanAuthToken {token}"; tokens are refreshed with /token/refresh, inspected with /token/validate and deleted with /token/logout.'
+- type: certificate
+  description: CA-issued client certificate authentication against /token/authenticate as an alternative to username/password.

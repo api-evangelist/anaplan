@@ -1,0 +1,27 @@
+name: Anaplan conventions
+generated: '2026-10-20'
+method: searched
+source: https://anaplan.docs.apiary.io/
+authentication:
+  style: 'Authorization: AnaplanAuthToken {token} header; tokens issued by the Authentication Service API at https://auth.anaplan.com/token/authenticate (Basic username/password or CA certificate) and refreshed via /token/refresh.'
+  docs: https://anaplanauthentication.docs.apiary.io/
+idempotency:
+  coverage: none
+  note: No Idempotency-Key header or replay protection is documented in the Integration API v2.0 reference. Action runs (imports, exports, processes) create a new task on every POST.
+pagination:
+  style: offset
+  params: [limit, offset, sort]
+  response_fields: [currentPageSize, next, offset]
+  docs: https://anaplan.docs.apiary.io/
+versioning:
+  style: url-path
+  current: '2.0'
+  note: Version is in the base path, https://api.anaplan.com/2/0.
+async_tasks:
+  note: Imports, exports, processes and deletes are run by POSTing to .../{actionId}/tasks and polling the returned taskId.
+reversibility:
+  coverage: none
+  note: The reference documents no undo, rollback or restore operation for imports, cell writes or delete actions; Delete Actions remove list items and are not documented as reversible. No reversal window is stated.
+links:
+  lifecycle: lifecycle/anaplan-lifecycle.yml
+  rate_limits: rate-limits/anaplan-rate-limits.yml

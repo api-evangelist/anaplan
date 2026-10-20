@@ -1,0 +1,225 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 16
+  own: 11
+  other_domain: 0
+  platform: 5
+  roles:
+  - api
+  - collections
+  - community
+  - docs
+  - identity
+  - other
+  - partner
+  - portal
+  - source
+  - status
+  - support
+  - website
+hosts:
+- host: anaplan.docs.apiary.io
+  found_by:
+  - pointer
+  - apis[]
+  - vendor-detect
+  types:
+  - APIReference
+  serves:
+  - docs
+  - cdn
+  vendor: akamai
+  registrable_domain: apiary.io
+  role: docs
+  relation: platform
+- host: api.anaplan.com
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: anaplan.com
+  role: api
+  relation: own
+- host: auth.anaplan.com
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: anaplan.com
+  role: identity
+  relation: own
+- host: community.anaplan.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Community
+  serves: []
+  registrable_domain: anaplan.com
+  role: community
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: help.anaplan.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Documentation
+  - DeveloperPortal
+  serves:
+  - docs
+  - cdn
+  vendor: cloudfront
+  registrable_domain: anaplan.com
+  role: portal
+  relation: own
+- host: partners.anaplan.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  types: []
+  serves: []
+  title: How Can You Join Our Global Partner Program? | Anaplan
+  status: 200
+  registrable_domain: anaplan.com
+  role: partner
+  relation: own
+- host: portal.anaplan.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: anaplan.com
+  role: other
+  relation: own
+- host: status.anaplan.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: anaplan.com
+  role: status
+  relation: own
+- host: support.anaplan.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Support
+  serves: []
+  registrable_domain: anaplan.com
+  role: support
+  relation: own
+- host: trust.anaplan.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  types:
+  - Compliance
+  serves: []
+  registrable_domain: anaplan.com
+  role: other
+  relation: own
+- host: us1a.app.anaplan.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  types:
+  - Login
+  serves: []
+  registrable_domain: anaplan.com
+  role: identity
+  relation: own
+- host: www.anaplan.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Security
+  - Newsroom
+  - Leadership
+  - Website
+  - Blog
+  - Pricing
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: anaplan.com
+  role: website
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.postman.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Postman
+  serves:
+  - api-collections
+  vendor: postman
+  registrable_domain: postman.com
+  role: collections
+  relation: platform
+- host: x.com
+  found_by:
+  - pointer
+  types:
+  - X
+  serves: []
+  registrable_domain: x.com
+  role: other
+  relation: platform

@@ -4,14 +4,15 @@
 # Coverage demoted 2026-10-07 (roadmap#942, PLAN.md Stage A): this file was written by an API Evangelist
 # sweep and names no billing unit, meters or pricing category read from the provider — it restates the
 # FinOps framework. It is `x-coverage: unmeasured`, and the FOCUS alignment it claimed has been removed.
+name: Anaplan API FinOps
 x-coverage: unmeasured
 method: generated
 generated: '2026-06-12'
 specification: FinOps Framework 1.0
 provider: Anaplan
 providerId: anaplan
-created: 2026-06-12
-modified: 2026-06-12
+created: '2026-06-12'
+modified: '2026-06-12'
 url: https://www.anaplan.com/platform/
 description: >
   Anaplan is an enterprise SaaS platform priced via annual subscription contracts

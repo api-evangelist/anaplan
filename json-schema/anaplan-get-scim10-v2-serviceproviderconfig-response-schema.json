@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/anaplan/main/json-schema/anaplan-get-scim10-v2-serviceproviderconfig-response-schema.json",
+  "title": "GetScim10V2ServiceproviderconfigResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/anaplan-openapi-generated.yml#/components/schemas/GetScim10V2ServiceproviderconfigResponse",
+  "type": "object",
+  "properties": {
+    "schemas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "documentationUrl": {
+      "type": "string"
+    },
+    "patch": {
+      "type": "object",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        }
+      }
+    },
+    "bulk": {
+      "type": "object",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        },
+        "maxOperations": {
+          "type": "integer"
+        },
+        "maxPayloadSize": {
+          "type": "integer"
+        }
+      }
+    },
+    "filter": {
+      "type": "object",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        },
+        "maxResults": {
+          "type": "integer"
+        }
+      }
+    },
+    "changePassword": {
+      "type": "object",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        }
+      }
+    },
+    "sort": {
+      "type": "object",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        }
+      }
+    },
+    "authenticationSchemes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "specUrl": {
+            "type": "string"
+          },
+          "documentationUrl": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "primary": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string"
+        },
+        "resourceType": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastModified": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

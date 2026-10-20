@@ -1,0 +1,16 @@
+# Anaplan
+
+> Anaplan is the enterprise-class planning software platform.
+
+## Blog & Insights
+
+- [Sales forecasting: The complete guide](https://www.anaplan.com/blog/sales-forecasting-guide/): Learn how to create an accurate sales forecast with five step-by-step examples in our sales forecasting guide.
+- [Reducing the duration between acquisition and value  ](https://www.anaplan.com/blog/reducing-duration-between-acquisition-and-value/): Learn how AI turns post-acquisition financial consolidation from a bottleneck into a head start. 
+- [Read all about it: HarperCollins accelerates supply chain planning](https://www.anaplan.com/blog/harpercollins-accelerates-supply-chain-planning/): By aligning supply, demand, finance, and sales planning, the iconic publisher executes precise inventory replenishment to keep pace with shifting market demand.
+- [Connecting supply chain decisions to financial outcomes with AI](https://www.anaplan.com/blog/connecting-supply-chain-decisions-to-financial-outcomes-with-ai/): Can AI bridge the decision-making divide between CSCO and CFO?
+- [4 reasons why even the best workforce plans lose momentum](https://www.anaplan.com/blog/four-reasons-why-even-best-workforce-plans-lose-momentum/): The greatest risk to your workforce strategy isn't the plan itself, but its inability to adapt. Learn the four biggest workforce planning challenges and how leading organizations keep workforce strategies aligned with changing business priorities.
+- [The data science to unlock margin from retail size planning](https://www.anaplan.com/blog/data-science-to-unlock-margin-from-retail-size-planning/): Anaplan’s Size Optimization application helps retailers move beyond generic size curves to build more accurate, profitable size-level buy plans.
+- [Conquer multi-ERP complexity with AI-driven financial consolidation](https://www.anaplan.com/blog/conquer-multi-erp-complexity-with-ai-driven-financial-consolidation/): How AI-assisted chart of account mapping helps financial controllers harmonize data without forcing every entity onto a single ERP.
+- [Buyer's guide: Revenue performance management for sales planning](https://www.anaplan.com/blog/buyers-guide-revenue-performance-management-for-sales-planning/): Discover how to evaluate revenue performance management platforms to drive long-term growth through precise sales forecasting, territory planning, and incentive management.
+- [Prepare your workforce for the Agentic Enterprise](https://www.anaplan.com/blog/prepare-your-workforce-for-the-agentic-enterprise/): Discover how forward-thinking organizations are bridging the gap between human talent and AI agents, translating variable system costs into highly accurate operational plans.
+- [Why do demand planners distrust their AI forecast?](https://www.anaplan.com/blog/why-do-demand-planners-distrust-their-ai-forecast/): Explore the reasons for this costly distrust and how a human-AI partnership can improve supply chain results.

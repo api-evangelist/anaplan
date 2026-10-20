@@ -26,164 +26,296 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anaplan.png
 url: https://raw.githubusercontent.com/api-evangelist/anaplan/refs/heads/main/apis.yml
-created: 2026-06-12
-modified: 2026-06-12
+created: '2026-06-12'
+modified: '2026-10-20'
 specificationVersion: '0.23'
-description: >
-  Anaplan is a cloud-native connected planning platform used by enterprises for
-  financial planning and analysis (FP&A), supply chain planning, and sales performance
-  management. Its REST API (Integration API v2.0) allows integrators to import and
-  export data, trigger model processes, and manage Anaplan workspaces programmatically.
-  Beyond bulk data operations, Anaplan exposes dedicated APIs for financial consolidation,
-  identity management via SCIM, audit event streaming, application lifecycle management,
-  and CloudWorks custom integrations. All API access requires authentication via the
-  Anaplan Authentication Service API, which issues tokens using username/password
-  credentials or client certificates.
+description: 'Anaplan is a cloud-native connected planning platform used by enterprises for financial planning and analysis (FP&A), supply chain
+  planning, and sales performance management. Its REST API (Integration API v2.0) allows integrators to import and export data, trigger model
+  processes, and manage Anaplan workspaces programmatically. Beyond bulk data operations, Anaplan exposes dedicated APIs for financial consolidation,
+  identity management via SCIM, audit event streaming, application lifecycle management, and CloudWorks custom integrations. All API access requires
+  authentication via the Anaplan Authentication Service API, which issues tokens using username/password credentials or client certificates.
+
+  '
 tags:
-  - Connected Planning
-  - Enterprise Planning
-  - FP&A
-  - Supply Chain
-  - Sales Planning
-  - Financial Consolidation
-  - SCIM
-  - REST
-apis:
-  - name: Anaplan Integration API v2.0
-    description: >
-      RESTful bulk and transactional API for importing data, exporting results,
-      running processes, and managing models within Anaplan workspaces.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://help.anaplan.com/integration-api-v20-399496b0-d66e-4a84-895a-8d1ffdee2e6b
-    baseURL: https://api.anaplan.com/2/0
-    tags:
-      - Integration
-      - Bulk Data
-      - REST
-    properties:
-      - type: Documentation
-        url: https://help.anaplan.com/integration-api-v20-399496b0-d66e-4a84-895a-8d1ffdee2e6b
-      - type: Postman
-        url: https://www.postman.com/anaplaninc
-
-  - name: Anaplan Authentication Service API
-    description: >
-      Manages authentication token creation and refresh for accessing all
-      other Anaplan APIs using username/password or client certificate credentials.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-    baseURL: https://auth.anaplan.com
-    tags:
-      - Authentication
-      - Tokens
-    tags_raw:
-      - Authentication
-      - OAuth
-      - Tokens
-    properties:
-      - type: Documentation
-        url: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-
-  - name: Anaplan Financial Consolidation API
-    description: >
-      Controls workflows, manages security, and supports retrieval, insertion,
-      update, and deletion of financial data and metadata for consolidation use cases.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://help.anaplan.com/anaplan-financial-consolidation-api-e83345d8-0509-4228-b532-679ee398a9d5
-    baseURL: https://api.anaplan.com
-    tags:
-      - Financial Consolidation
-      - Workflows
-      - Metadata
-    properties:
-      - type: Documentation
-        url: https://help.anaplan.com/anaplan-financial-consolidation-api-e83345d8-0509-4228-b532-679ee398a9d5
-
-  - name: Anaplan SCIM API
-    description: >
-      System for Cross-Domain Identity Management API for provisioning and managing
-      user identities across multiple domains within the Anaplan platform.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-    baseURL: https://api.anaplan.com/scim/2/0
-    tags:
-      - SCIM
-      - Identity and Access Management
-      - Provisioning
-    tags_raw:
-      - SCIM
-      - Identity Management
-      - Provisioning
-    properties:
-      - type: Documentation
-        url: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-
-  - name: Anaplan CloudWorks API
-    description: >
-      Enables creation of custom connections and integrations between Anaplan
-      and external data sources and systems through CloudWorks.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-    baseURL: https://api.anaplan.com
-    tags:
-      - CloudWorks
-      - Integration
-      - Connectors
-    tags_raw:
-      - CloudWorks
-      - Integrations
-      - Connectors
-    properties:
-      - type: Documentation
-        url: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-
-  - name: Anaplan Audit API
-    description: >
-      Tracks and streams audit events and security alerts for integration
-      with Security Information and Event Management (SIEM) services.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-    baseURL: https://api.anaplan.com
-    tags:
-      - Audit
-      - Security
-      - SIEM
-    properties:
-      - type: Documentation
-        url: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
-
-common:
-  - type: TrustCenter
-    url: security/anaplan-trust-center.yml
-  - type: DomainSecurity
-    url: security/anaplan-domain-security.yml
-  - type: Website
-    url: https://www.anaplan.com
-  - type: Documentation
-    url: https://help.anaplan.com
-  - type: GitHubOrganization
-    url: https://github.com/anaplaninc
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/anaplan
-  - type: Blog
-    url: https://www.anaplan.com/blog/
-  - type: BlogFeed
-    url: blogs/blogs.json
-  - type: Pricing
-    url: https://www.anaplan.com/platform/
-  - type: StatusPage
-    url: https://status.anaplan.com/
-  - type: X
-    url: https://x.com/anaplan
-  - type: Plans
-    url: plans/anaplan-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/anaplan-rate-limits.yml
-  - type: FinOps
-    url: finops/anaplan-finops.yml
-  - type: JSONLDContext
-    url: json-ld/anaplan-context.jsonld
-
+- Connected Planning
+- Enterprise Planning
+- FP&A
+- Supply Chain
+- Sales Planning
+- Financial Consolidation
+- SCIM
+- REST
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+common:
+- type: Authentication
+  url: authentication/anaplan-authentication.yml
+- type: Spectral
+  url: rules/anaplan-rules.yml
+- type: JSONLD
+  url: json-ld/anaplan-context.jsonld
+- type: Vocabulary
+  url: vocabulary/anaplan-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/anaplan-data-model.yml
+- type: Conventions
+  url: conventions/anaplan-conventions.yml
+- type: Compliance
+  url: https://trust.anaplan.com/
+- type: Lifecycle
+  url: lifecycle/anaplan-lifecycle.yml
+- type: Conformance
+  url: conformance/anaplan-conformance.yml
+- type: LLMsTxt
+  url: llms/anaplan-llms.txt
+- type: SecurityTxt
+  url: well-known/anaplan-status-security.txt
+- type: WellKnown
+  url: well-known/anaplan-well-known.yml
+- type: Hosts
+  url: hosts/anaplan-hosts.yml
+- type: IntegrationEdges
+  url: integrations/anaplan-integration-edges.yml
+- type: Vendors
+  url: vendors/anaplan-vendors.yml
+- type: SDKs
+  url: packages/anaplan-packages.yml
+- type: Packages
+  url: packages/anaplan-packages.yml
+- type: Security
+  url: https://www.anaplan.com/platform/security/
+- type: Newsroom
+  url: https://www.anaplan.com/news/
+- type: Leadership
+  url: https://www.anaplan.com/about/leadership/
+- type: TrustCenter
+  url: security/anaplan-trust-center.yml
+- type: DomainSecurity
+  url: security/anaplan-domain-security.yml
+- type: Website
+  url: https://www.anaplan.com
+- type: Documentation
+  url: https://help.anaplan.com
+- type: GitHubOrganization
+  url: https://github.com/anaplaninc
+- type: LinkedIn
+  url: https://www.linkedin.com/company/anaplan
+- type: Blog
+  url: https://www.anaplan.com/blog/
+- type: BlogFeed
+  url: blogs/blogs.json
+- type: Pricing
+  url: https://www.anaplan.com/platform/
+- type: StatusPage
+  url: https://status.anaplan.com/
+- type: X
+  url: https://x.com/anaplan
+- type: Plans
+  url: plans/anaplan-plans-pricing.yml
+- type: FinOps
+  url: finops/anaplan-finops.yml
+- type: JSONLDContext
+  url: json-ld/anaplan-context.jsonld
+- type: APIReference
+  url: https://anaplan.docs.apiary.io/
+- type: DeveloperPortal
+  url: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
+- type: Support
+  url: https://support.anaplan.com/
+- type: Community
+  url: https://community.anaplan.com/
+- type: Login
+  url: https://us1a.app.anaplan.com/auth/login
+- type: TermsOfService
+  url: https://www.anaplan.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.anaplan.com/privacy-policy
+- type: Postman
+  url: https://www.postman.com/anaplaninc
+apis:
+- name: Anaplan Integration API v2.0
+  description: 'RESTful bulk and transactional API for importing data, exporting results, running processes, and managing models within Anaplan
+    workspaces.
+
+    '
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/integration-api-v20-3107aa54-d12b-4c48-9550-3561c84adbb2
+  baseURL: https://api.anaplan.com/2/0
+  tags:
+  - Integration
+  - Bulk Data
+  - REST
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/integration-api-v20-3107aa54-d12b-4c48-9550-3561c84adbb2
+  - type: Postman
+    url: https://www.postman.com/anaplaninc
+  - type: APIReference
+    url: https://anaplanbulkapi20.docs.apiary.io/
+  aid: anaplan:anaplan-integration-api-v2-0
+- name: Anaplan Authentication Service API
+  description: 'Manages authentication token creation and refresh for accessing all other Anaplan APIs using username/password or client certificate
+    credentials.
+
+    '
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/authentication-service-api-4060eddf-fe4e-4220-96f6-267d54502ed6
+  baseURL: https://auth.anaplan.com
+  tags:
+  - Authentication
+  - Tokens
+  tags_raw:
+  - Authentication
+  - OAuth
+  - Tokens
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/authentication-service-api-4060eddf-fe4e-4220-96f6-267d54502ed6
+  - type: APIReference
+    url: https://anaplanauthentication.docs.apiary.io/
+  aid: anaplan:anaplan-authentication-service-api
+- name: Anaplan Financial Consolidation API
+  description: 'Controls workflows, manages security, and supports retrieval, insertion, update, and deletion of financial data and metadata for
+    consolidation use cases.
+
+    '
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/anaplan-financial-consolidation-api-e83345d8-0509-4228-b532-679ee398a9d5
+  baseURL: https://api.anaplan.com
+  tags:
+  - Financial Consolidation
+  - Workflows
+  - Metadata
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/anaplan-financial-consolidation-api-e83345d8-0509-4228-b532-679ee398a9d5
+  aid: anaplan:anaplan-financial-consolidation-api
+- name: Anaplan SCIM API
+  description: 'System for Cross-Domain Identity Management API for provisioning and managing user identities across multiple domains within the
+    Anaplan platform.
+
+    '
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/scim-api-f6a801cd-c253-4ab9-ba03-dac09fd71f7c
+  baseURL: https://api.anaplan.com/scim/1/0/v2
+  tags:
+  - SCIM
+  - Identity and Access Management
+  - Provisioning
+  tags_raw:
+  - SCIM
+  - Identity Management
+  - Provisioning
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/scim-api-f6a801cd-c253-4ab9-ba03-dac09fd71f7c
+  aid: anaplan:anaplan-scim-api
+- name: Anaplan CloudWorks API
+  description: 'Enables creation of custom connections and integrations between Anaplan and external data sources and systems through CloudWorks.
+
+    '
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/cloudworks-api-94bfcdc3-fff0-48d6-be9c-0e1bba2e889c
+  baseURL: https://api.anaplan.com
+  tags:
+  - CloudWorks
+  - Integration
+  - Connectors
+  tags_raw:
+  - CloudWorks
+  - Integrations
+  - Connectors
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/cloudworks-api-94bfcdc3-fff0-48d6-be9c-0e1bba2e889c
+  aid: anaplan:anaplan-cloudworks-api
+- name: Anaplan Audit API
+  description: 'Tracks and streams audit events and security alerts for integration with Security Information and Event Management (SIEM) services.
+
+    '
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/audit-api-0dbbe4be-d5b7-4075-89ad-fa922f88e855
+  baseURL: https://api.anaplan.com
+  tags:
+  - Audit
+  - Security
+  - SIEM
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/audit-api-0dbbe4be-d5b7-4075-89ad-fa922f88e855
+  aid: anaplan:anaplan-audit-api
+- name: Anaplan Application Lifecycle Management API
+  description: Manage the development, testing, and deployment of Anaplan models (revisions, model sync) programmatically.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/application-lifecycle-management-api-2565cfa6-e0c2-4e24-884e-d0df957184d6
+  baseURL: https://api.anaplan.com
+  tags:
+  - Administration
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/application-lifecycle-management-api-2565cfa6-e0c2-4e24-884e-d0df957184d6
+  aid: anaplan:anaplan-application-lifecycle-management-api
+- name: Anaplan Exception Users API
+  description: Manage which users have exception user access to workspaces within an Anaplan tenant.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/exception-users-api--814cd4ae-0e80-4910-8500-988ad089eef1
+  baseURL: https://api.anaplan.com
+  tags:
+  - Administration
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/exception-users-api--814cd4ae-0e80-4910-8500-988ad089eef1
+  aid: anaplan:anaplan-exception-users-api
+- name: Anaplan Administration API
+  description: Manage user details and settings at the administration level, including bulk user import and export endpoints.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.anaplan.com/administration-api-34c09687-9110-4672-b31b-0f959f67ea32
+  baseURL: https://api.anaplan.com/admin/1/0
+  tags:
+  - Administration
+  properties:
+  - type: Documentation
+    url: https://help.anaplan.com/administration-api-34c09687-9110-4672-b31b-0f959f67ea32
+  aid: anaplan:anaplan-administration-api
+- aid: anaplan:anaplan-api
+  name: Anaplan API
+  description: 'Anaplan API as documented publicly: 129 operations. Contract generated from the documentation by API Evangelist (2026-10-20);
+
+    not the provider''s own document.'
+  humanURL: https://anaplan.docs.apiary.io
+  baseURL: https://api.anaplan.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/anaplan-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/anaplan-get-scim10-v2-serviceproviderconfig-response-schema.json
+  - type: JSONSchema
+    url: json-schema/anaplan-get20-models-response-schema.json
+  - type: JSONSchema
+    url: json-schema/anaplan-get20-workspaces-workspaceid-models-response-schema.json
+  - type: JSONSchema
+    url: json-schema/anaplan-post-scim10-v2-user-response-schema.json
+  - type: JSONSchema
+    url: json-schema/anaplan-post20-integrations-integrationid-schedule-request-schema.json
+  - type: JSONSchema
+    url: json-schema/anaplan-get-audit-api1-events-search-response-schema.json
+x-coverage:
+  state: covered
+  reason: covered
+  detail: Integration, Authentication, SCIM, CloudWorks, ALM, Audit, Exception Users and Administration APIs are documented on Anapedia and Apiary;
+    no published OpenAPI, so a 129-operation contract was generated from the docs.
+  evidence:
+  - url: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
+    status: 200
+  - url: https://anaplan.docs.apiary.io/
+    status: 200
+  checked: '2026-10-20'
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v5

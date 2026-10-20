@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/anaplan/main/json-schema/anaplan-post-scim10-v2-user-response-schema.json",
+  "title": "PostScim10V2UserResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/anaplan-openapi-generated.yml#/components/schemas/PostScim10V2UserResponse",
+  "type": "object",
+  "properties": {
+    "totalResults": {
+      "type": "integer"
+    },
+    "startIndex": {
+      "type": "integer"
+    },
+    "itemsPerPage": {
+      "type": "integer"
+    },
+    "Resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "schemas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "resourceType": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "lastModified": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "location": {
+                "type": "string"
+              }
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "externalId": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "name": {
+            "type": "object",
+            "properties": {
+              "familyName": {
+                "type": "string"
+              },
+              "givenName": {
+                "type": "string"
+              },
+              "formatted": {
+                "type": "string"
+              }
+            }
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "entitlements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "display": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

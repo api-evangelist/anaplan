@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/anaplan/main/json-schema/anaplan-post20-integrations-integrationid-schedule-request-schema.json",
+  "title": "Post20IntegrationsIntegrationidScheduleRequest",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/anaplan-openapi-generated.yml#/components/schemas/Post20IntegrationsIntegrationidScheduleRequest",
+  "type": "object",
+  "properties": {
+    "integrationId": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "object"
+    },
+    "schedule.name": {
+      "type": "string"
+    },
+    "schedule.type": {
+      "type": "string"
+    },
+    "schedule.time": {
+      "type": "string"
+    },
+    "schedule.daysOfWeek": {
+      "type": "array"
+    },
+    "schedule.dayOfMonth": {
+      "type": "integer"
+    },
+    "schedule.repeatEvery": {
+      "type": "integer"
+    },
+    "schedule.fromTime": {
+      "type": "string"
+    },
+    "schedule.toTime": {
+      "type": "string"
+    },
+    "schedule.startDate": {
+      "type": "string"
+    },
+    "schedule.endDate": {
+      "type": "string"
+    },
+    "schedule.timezone": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "integrationId",
+    "schedule",
+    "schedule.name",
+    "schedule.type",
+    "schedule.startDate",
+    "schedule.timezone"
+  ]
+}

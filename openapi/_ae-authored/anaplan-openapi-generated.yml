@@ -1,0 +1,5415 @@
+openapi: 3.1.0
+info:
+  title: Anaplan API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 129 operation(s) read from 20 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; Anaplan has published no machine-readable contract
+    that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 132
+    documentation: -3
+    pages-with-code: 17
+    pages-read: 20
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://anaplan.docs.apiary.io
+  - https://scimapi.docs.apiary.io
+  - https://cloudworks.docs.apiary.io
+  - https://auditservice.docs.apiary.io
+  - https://anaplanauthentication.docs.apiary.io
+  - https://anaplan.docs.apiary.io/ListProcessDefinitions
+  - https://help.anaplan.com/get-started-with-the-anaplan-scim-api-7352b06c-d843-4efc-9906-d91d53ffcd9c
+  - https://help.anaplan.com/how-to-implement-scim-6f127888-9b62-4ff1-8c5b-7a91be0f2d66
+  - https://help.anaplan.com/troubleshoot-the-scim-api-69801432-d787-40ba-8f79-d4bc9dcadbdd
+  - https://help.anaplan.com/bulk-create-or-update-users-with-a-csv-20e16ec3-af9e-4e23-a960-088d00ce45df
+  - https://help.anaplan.com/export-users-to-csv-d297283b-17ba-4830-883f-60e1883d2e2b
+  - https://help.anaplan.com/20e16ec3-af9e-4e23-a960-088d00ce45df
+  - https://help.anaplan.com/d297283b-17ba-4830-883f-60e1883d2e2b
+  - https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+  - https://help.anaplan.com/bcddc03e-9c46-4174-9bae-347cf77a45d4
+  - https://help.anaplan.com/e1cdae2e-e07a-4e13-819a-6f378d5f7088
+  - https://help.anaplan.com/480986d3-a907-4675-9cdf-1392e95e1a20
+  - https://help.anaplan.com/metadata-and-configuration-endpoints-3f9b3c38-641f-49e0-ad61-786b462a7eb3
+  - https://help.anaplan.com/3a4a2905-3d55-4199-a980-d1a89ffdcb7e-Use-basic-authentication
+  - https://help.anaplan.com/1493b16d-7294-47d6-bd8d-056962e9b8da-Use-CA-certificate-authentication
+servers:
+- url: https://api.anaplan.com
+paths:
+  /2/0/integrationflows:
+    get:
+      operationId: get_2_0_integrationflows
+      tags:
+      - '2'
+      summary: GET /2/0/integrationflows
+      x-source: https://cloudworks.docs.apiary.io
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20IntegrationflowsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET ‘https://api.cloudworks.anaplan.com/2/0/integrationflows  -H ‘Authorization: AnaplanAuthToken {anaplan_auth_token}’\
+          \  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response is application/json\
+          \ f"
+  /2/0/integrationflows/{integrationflowid}/run:
+    post:
+      operationId: post_2_0_integrationflows_integrationflowid_run
+      tags:
+      - '2'
+      summary: Run an integration flow.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationflowid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20IntegrationflowsIntegrationflowidRunRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationflowsIntegrationflowidRunResponse'
+      x-evidence:
+        kind: documentation
+  /2/0/integrationflows/{integrationFlowId}’:
+    delete:
+      operationId: delete_2_0_integrationflows_integrationFlowId
+      tags:
+      - '2'
+      summary: DELETE /2/0/integrationflows/{integrationFlowId}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationFlowId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE ‘https://api.cloudworks.anaplan.com/2/0/integrationflows/{integrationFlowId}’  -H ‘Authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred respon"
+    put:
+      operationId: put_2_0_integrationflows_integrationFlowId
+      tags:
+      - '2'
+      summary: PUT /2/0/integrationflows/{integrationFlowId}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationFlowId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT ‘https://api.cloudworks.anaplan.com/2/0/integrationflows/{integrationFlowId}’  -H ‘Authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response "
+  /2/0/integrationflows/{integrationflowid}/run’:
+    post:
+      operationId: post_2_0_integrationflows_integrationflowid_run
+      tags:
+      - '2'
+      summary: POST /2/0/integrationflows/{integrationflowid}/run’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationflowid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationflowsIntegrationflowidRunResponse2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrationflows/{integrationFlowId}/run’  -H ‘Authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This call uses a content type of "
+  /2/0/integrationflows’:
+    post:
+      operationId: post_2_0_integrationflows
+      tags:
+      - '2'
+      summary: POST /2/0/integrationflows’
+      x-source: https://cloudworks.docs.apiary.io
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationflowsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrationflows’  -H ‘Authorization: AnaplanAuthToken {anaplan_auth_token}’\
+          \  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response is application/json"
+  /2/0/integrations:
+    get:
+      operationId: get_2_0_integrations
+      tags:
+      - '2'
+      summary: Get all integrations.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: offset
+        in: query
+        required: false
+        schema:
+          type: number
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: number
+      - name: myIntegrations
+        in: query
+        required: false
+        schema:
+          type: number
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20IntegrationsResponse'
+      x-evidence:
+        kind: documentation
+  /2/0/integrations/connections/{connectionid}:
+    get:
+      operationId: get_2_0_integrations_connections_connectionid
+      tags:
+      - '2'
+      summary: Edit a connection in Anaplan CloudWorks.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: connectionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20IntegrationsConnectionsConnectionidResponse'
+      x-evidence:
+        kind: documentation
+  /2/0/integrations/connections/{connectionId}’:
+    patch:
+      operationId: patch_2_0_integrations_connections_connectionId
+      tags:
+      - '2'
+      summary: PATCH /2/0/integrations/connections/{connectionId}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: connectionId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PATCH ‘https://api.cloudworks.anaplan.com/2/0/integrations/connections/{connectionId}’  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’  -d ‘{ \"{body field}\": \"{JSON}\" }'\nRequest headers\nHeader Details\nAuthorization:\
+          \ AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription:\
+          \ This "
+    put:
+      operationId: put_2_0_integrations_connections_connectionId
+      tags:
+      - '2'
+      summary: PUT /2/0/integrations/connections/{connectionId}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: connectionId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT ‘https://api.cloudworks.anaplan.com/2/0/integrations/connections/{connectionId}’  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’  -d ‘{request body}'\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken\
+          \ {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates\
+          \ the pr"
+  /2/0/integrations/connections’:
+    post:
+      operationId: post_2_0_integrations_connections
+      tags:
+      - '2'
+      summary: POST /2/0/integrations/connections’
+      x-source: https://cloudworks.docs.apiary.io
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrations/connections’  -H ‘Authorization: AnaplanAuthToken {token_value}’\
+          \  -H ‘Content-Type: application/json’  -d ‘{request body}’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred respon"
+  /2/0/integrations/notification/{notificationId}’:
+    put:
+      operationId: put_2_0_integrations_notification_notificationId
+      tags:
+      - '2'
+      summary: PUT /2/0/integrations/notification/{notificationId}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: notificationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Put20IntegrationsNotificationNotificationidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT ‘https://api.cloudworks.anaplan.com/2/0/integrations/notification/{notificationId}’  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’  -d ‘{request body}'\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken\
+          \ {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates\
+          \ the"
+  /2/0/integrations/notification’:
+    post:
+      operationId: post_2_0_integrations_notification
+      tags:
+      - '2'
+      summary: POST /2/0/integrations/notification’
+      x-source: https://cloudworks.docs.apiary.io
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationsNotificationResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrations/notification’  -H ‘Authorization: AnaplanAuthToken {anaplan_auth_token}’\
+          \  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response is applica"
+  /2/0/integrations/{integrationid}/cancel:
+    post:
+      operationId: post_2_0_integrations_integrationid_cancel
+      tags:
+      - '2'
+      summary: Cancel an ongoing integration job.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationsIntegrationidCancelResponse'
+      x-evidence:
+        kind: documentation
+  /2/0/integrations/{integrationid}/run:
+    post:
+      operationId: post_2_0_integrations_integrationid_run
+      tags:
+      - '2'
+      summary: Run an integration.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationsIntegrationidRunResponse'
+      x-evidence:
+        kind: documentation
+  /2/0/integrations/{integrationid}/schedule:
+    delete:
+      operationId: delete_2_0_integrations_integrationid_schedule
+      tags:
+      - '2'
+      summary: Delete an integration schedule.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Delete20IntegrationsIntegrationidScheduleResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_2_0_integrations_integrationid_schedule
+      tags:
+      - '2'
+      summary: Create an integration schedule.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20IntegrationsIntegrationidScheduleRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationsIntegrationidScheduleResponse'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_2_0_integrations_integrationid_schedule
+      tags:
+      - '2'
+      summary: PUT /2/0/integrations/{integrationid}/schedule
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}/schedule'  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This call uses a content type of\
+          \ application"
+  /2/0/integrations/{integrationid}/schedule/status/{status}:
+    get:
+      operationId: get_2_0_integrations_integrationid_schedule_status_status
+      tags:
+      - '2'
+      summary: Set the status of a scheduled integration.
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: status
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20IntegrationsIntegrationidScheduleStatusStatusResponse'
+      x-evidence:
+        kind: documentation
+  /2/0/integrations/{integrationId}’:
+    delete:
+      operationId: delete_2_0_integrations_integrationId
+      tags:
+      - '2'
+      summary: DELETE /2/0/integrations/{integrationId}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}’  -H ‘Authorization: AnaplanAuthToken {anaplan_auth_token}’\
+          \  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response is ap"
+    put:
+      operationId: put_2_0_integrations_integrationId
+      tags:
+      - '2'
+      summary: PUT /2/0/integrations/{integrationId}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}’  -H ‘Authorization: AnaplanAuthToken {anaplan_auth_token}’\
+          \  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response is appli"
+  /2/0/integrations/{integrationid}/cancel’:
+    post:
+      operationId: post_2_0_integrations_integrationid_cancel
+      tags:
+      - '2'
+      summary: POST /2/0/integrations/{integrationid}/cancel’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationsIntegrationidCancelResponse2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}/cancel’  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This call uses a content type of\
+          \ application/"
+  /2/0/integrations/{integrationid}/run’:
+    post:
+      operationId: post_2_0_integrations_integrationid_run
+      tags:
+      - '2'
+      summary: POST /2/0/integrations/{integrationid}/run’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20IntegrationsIntegrationidRunResponse2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}/run’  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This call uses a content type of\
+          \ application/jso"
+  /2/0/integrations/{integrationid}/schedule/status/{status}’:
+    post:
+      operationId: post_2_0_integrations_integrationid_schedule_status_status
+      tags:
+      - '2'
+      summary: POST /2/0/integrations/{integrationid}/schedule/status/{status}’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: status
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}/schedule/status/{status}’  -H ‘Authorization:\
+          \ AnaplanAuthToken {token_value}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken\
+          \ {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This call uses\
+          \ a content ty"
+  /2/0/integrations/{integrationid}/schedule’:
+    delete:
+      operationId: delete_2_0_integrations_integrationid_schedule
+      tags:
+      - '2'
+      summary: DELETE /2/0/integrations/{integrationid}/schedule’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}/schedule’  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This call uses a content type of\
+          \ applicat"
+    post:
+      operationId: post_2_0_integrations_integrationid_schedule
+      tags:
+      - '2'
+      summary: POST /2/0/integrations/{integrationid}/schedule’
+      x-source: https://cloudworks.docs.apiary.io
+      parameters:
+      - name: integrationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrations/{integrationId}/schedule’  -H ‘Authorization: AnaplanAuthToken\
+          \ {token_value}’  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {token_value}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This call uses a content type of\
+          \ application/json."
+  /2/0/integrations’:
+    get:
+      operationId: get_2_0_integrations
+      tags:
+      - '2'
+      summary: GET /2/0/integrations’
+      x-source: https://cloudworks.docs.apiary.io
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20IntegrationsResponse2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET ‘https://api.cloudworks.anaplan.com/2/0/integrations’  -H ‘Authorization: AnaplanAuthToken {anaplan_auth_token}’\
+          \  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response is application/json\
+          \ form"
+    post:
+      operationId: post_2_0_integrations
+      tags:
+      - '2'
+      summary: POST /2/0/integrations’
+      x-source: https://cloudworks.docs.apiary.io
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST ‘https://api.cloudworks.anaplan.com/2/0/integrations’  -H ‘Authorization: AnaplanAuthToken {anaplan_auth_token}’\
+          \  -H ‘Content-Type: application/json’\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nContent-Type \nRequired\nDescription: This indicates the preferred response is application/json\
+          \ for"
+  /2/0/models:
+    get:
+      operationId: get_2_0_models
+      tags:
+      - '2'
+      summary: GET /2/0/models
+      x-source: https://anaplan.docs.apiary.io
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20ModelsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET  https://api.anaplan.com/2/0/models  -H ''authorization: AnaplanAuthToken {anaplan_auth_token}''
+
+          Request headers
+
+          Authorization:AnaplanAuthToken {anaplan_auth_token}
+
+          Request parameters
+
+          Parameter Required Type Description Example
+
+          {modelDetails} Optional Boolean When set to true, this call returns the available model memory usage in bytes. When set to false, or
+          not defined, this call does n'
+  /2/0/models/{modelid}/lists/{listid}/items:
+    get:
+      operationId: get_2_0_models_modelid_lists_listid_items
+      tags:
+      - '2'
+      summary: Retrieve items from a list with optional metadata including selective access, subsets, and properties.
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20ModelsModelidListsListidItemsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_2_0_models_modelid_lists_listid_items
+      tags:
+      - '2'
+      summary: POST /2/0/models/{modelid}/lists/{listid}/items
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: action
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20ModelsModelidListsListidItemsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST 'https://api.anaplan.com/2/0/models/{modelId}/lists/{listId}/items?action=delete'  -H 'Authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type: application/json'  -H 'Accept: application/json'\nRequest headers\nHeader Details\nAuthorization:\
+          \ AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-Type: application/json \n\
+          Requir"
+  /2/0/models/{modelguid}/dimensions/{dimensionid}/items:
+    get:
+      operationId: get_2_0_models_modelguid_dimensions_dimensionid_items
+      tags:
+      - '2'
+      summary: GET /2/0/models/{modelguid}/dimensions/{dimensionid}/items
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: modelguid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: dimensionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET\n'https://api.anaplan.com/2/0/models/{modelGuid}/dimensions/{dimensionId}/items' -H 'Authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}' -H 'Accept: application/json'\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token}\
+          \ \nRequired\nDescription: the Anaplan authentication token\nAccept: application/json \nRequired\nDescription: This indicates the preferred\
+          \ res"
+  /2/0/models/{modelid}:
+    get:
+      operationId: get_2_0_models_modelid
+      tags:
+      - '2'
+      summary: GET /2/0/models/{modelid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20ModelsModelidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/models/{modelId}  -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'\nHeaders\n\
+          Authorization:AnaplanAuthToken {anaplan_auth_token}\nParameters\nParameter Description\nmodelId \nRequired\nType: string\nDescription:\
+          \ The model ID\nExample: FC12345678912343455667\nmodelDetails \nOptional\nType: Boolean\nDescription: When set to true, this call returns\
+          \ the available m"
+  /2/0/models/{modelid}/views:
+    get:
+      operationId: get_2_0_models_modelid_views
+      tags:
+      - '2'
+      summary: GET /2/0/models/{modelid}/views
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET\n'https://api.anaplan.com/2/0/models/{modelId}/views'  -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'\
+          \  -H 'Accept: application/json'\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\n\
+          Description: the Anaplan authentication token\nAccept: application/json \nRequired\nDescription: This indicates the preferred response\
+          \ is application/json"
+  /2/0/models/{modelid}/views/{viewid}/data:
+    get:
+      operationId: get_2_0_models_modelid_views_viewid_data
+      tags:
+      - '2'
+      summary: GET /2/0/models/{modelid}/views/{viewid}/data
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: viewid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: pages
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20ModelsModelidViewsViewidDataResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET
+
+          ''https://api.anaplan.com/2/0/models/{modelId}/views/{viewId}/data?pages=dimensionId:itemId&format=v1''  -H ''Authorization: AnaplanAuthToken
+          {anaplan_auth_token}''  -H ''Accept: application/json''
+
+          Request to export CSV data in Tabular Single Column Layout'
+  /2/0/users:
+    get:
+      operationId: get_2_0_users
+      tags:
+      - '2'
+      summary: GET /2/0/users
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: sort
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/users?sort=%2BemailAddress  -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'\
+          \  -H 'Content-Type:application/json'\nHeaders\nHeader Details\nAuthorization:AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription:\
+          \ The Anaplan authentication token\nContent-Type:application/json \nRequired\nDescription: Specifies the content type as application/json\n\
+          Parame"
+  /2/0/users/{userid}:
+    get:
+      operationId: get_2_0_users_userid
+      tags:
+      - '2'
+      summary: GET /2/0/users/{userid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/users/{userId}  -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\n\
+          Headers\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nContent-Type:application/json\nParameters\nParameter Description\nuserId\
+          \ \nOptional\nType: string\nDescription: The user ID\nExample: 8a8196a55b193fa0015b1e57f3da172c\nResponse 200 (application/jso"
+  /2/0/workspaces:
+    get:
+      operationId: get_2_0_workspaces
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: tenantDetails
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces?tenantDetails=true  -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'\n\
+          Request headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication\
+          \ token\nRequest parameters\nParameter Details\ntenantDetails \nOptional\nType: Boolean\nDescription: When set to true, this call returns\
+          \ an est"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/open:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_open
+      tags:
+      - '2'
+      summary: Wake up model.
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_open
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/open
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidOpenResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST \ https://api.anaplan.com/2/0/workspaces/{workspaceID}/models/{modelID}/open  -H ''authorization: AnaplanAuthToken
+          {anaplan_auth_token}'' -H ''Content-Type: application/json''
+
+          Request headers
+
+          Authorization:AnaplanAuthToken {anaplan_auth_token}
+
+          Response
+
+          The endpoint only returns a status code response. Possible status codes include:
+
+          Response Reason
+
+          404 The endpoint returns a 404 Not found '
+  /2/0/workspaces/{workspaceid}/bulkDeleteModels:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_bulkDeleteModels
+      tags:
+      - '2'
+      summary: Bulk delete models.
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidBulkdeletemodelsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_2_0_workspaces_workspaceid_bulkDeleteModels
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/bulkDeleteModels
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20WorkspacesWorkspaceidBulkdeletemodelsRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20WorkspacesWorkspaceidBulkdeletemodelsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/bulkDeleteModels'  -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'\n\
+          -H 'Content-Type: application/json'\n--data-raw '{ \n \"modelIdsToDelete\": [\"<model_id_to_delete_1\", \"<model_id_to_delete_2\" ...]\n\
+          }'\nRequest Headers\nHeader Required Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} Yes The Anaplan authentication to"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/modelCalendar/fiscalYear:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_modelCalendar_fiscalYear
+      tags:
+      - '2'
+      summary: Get current fiscal year for the model calendar.
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidModelcalendarFiscalye'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_2_0_workspaces_workspaceid_models_modelid_modelCalendar_fiscalYear
+      tags:
+      - '2'
+      summary: PUT /2/0/workspaces/{workspaceid}/models/{modelid}/modelCalendar/fiscalYear
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Put20WorkspacesWorkspaceidModelsModelidModelcalendarFiscalye'
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Put20WorkspacesWorkspaceidModelsModelidModelcalendarFiscalye2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/modelCalendar/fiscalYear'  -H 'Authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Accept: application/json'  -H 'Content-Type: application/json'  --data-raw '{\n \"year\"\
+          : \"{fiscal year}\"\n}'\nRequest headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription:\
+          \ the Anaplan au"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/views/{viewid}/readRequests/:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_views_viewid_readRequests
+      tags:
+      - '2'
+      summary: Retrieve status of large read request to check export progress and available pages.
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: viewid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidViewsViewidReadreques'
+      x-evidence:
+        kind: documentation
+  /2/0/workspaces/{workspaceid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: tenantDetails
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}?tenantDetails=true  -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'\n\
+          Request headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication\
+          \ token\nRequest parameters\nParameter Details\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8"
+  /2/0/workspaces/{workspaceid}/models:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelDetails
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models?modelDetails=true  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'\nRequest headers\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nRequest parameters\nParameter Description\n\
+          workspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c8d8e8f8g8i\nmodelDetails \nOptional\nType: Boolean\n\
+          Description: "
+  /2/0/workspaces/{workspaceid}/models/{modelid}/actions:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_actions
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/actions
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidActionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/actions  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nContent-Type:application/json\n\
+          Parameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c8d8e8f8g8i\n"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/actions/{actionid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_actions_actionid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/actions/{actionid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidActionsActionidRespon'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/actions/{actionId}  -H ''authorization: AnaplanAuthToken
+          {anaplan_auth_token}''  -H ''Content-Type:application/json''
+
+          Headers
+
+          Authorization:AnaplanAuthToken {anaplan_auth_token}
+
+          Content-Type:application/json
+
+          Parameters
+
+          Parameter Required Type Description Example
+
+          workspaceId Yes string The workspace ID 8a8b8c8d8e8f8g8i
+
+          m'
+  /2/0/workspaces/{workspaceid}/models/{modelid}/actions/{actionid}/tasks:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_actions_actionid_tasks
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/actions/{actionid}/tasks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/actions/{actionId}/tasks  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n\
+          Example: "
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_actions_actionid_tasks
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/actions/{actionid}/tasks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actionid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidActionsActionidTasks'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/actions/{actionId}/tasks  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}' -H 'Content-Type:application/json'  -d '{\"localeName\": \"en_US\"}'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nBody\n{\"localeName\": \"en_US\"}\nParameters\nParameter Description\nworkspaceId\
+          \ \nRe"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/actions/{actionid}/tasks/{taskid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_actions_actionid_tasks_taskid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/actions/{actionid}/tasks/{taskid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/actions/{actionId}/tasks/{taskId}  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/close:
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_close
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/close
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/close  -H ''Authorization: AnaplanAuthToken
+          {anaplan_auth_token}''
+
+          -H ''Content-Type: application/json''
+
+          Headers
+
+          Header Required Description
+
+          Authorization:AnaplanAuthToken {anaplan_auth_token} Yes The Anaplan authentication token.
+
+          Content-Type: application/json Yes Describes the media type of the request body.
+
+          Paramete'
+  /2/0/workspaces/{workspaceid}/models/{modelid}/exports:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_exports
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/exports
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidExportsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/exports  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nContent-Type:application/json\n\
+          Parameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c8d8e8f8g8i\n"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/exports/{exportid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_exports_exportid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/exports/{exportid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: exportid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidExportsExportidRespon'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/exports/{exportId}  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token} Content-Type:application/json\n\
+          Parameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/exports/{exportid}/tasks:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_exports_exportid_tasks
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/exports/{exportid}/tasks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: exportid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/exports/{exportId}/tasks  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n\
+          Example: "
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_exports_exportid_tasks
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/exports/{exportid}/tasks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: exportid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidExportsExportidTasks'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidExportsExportidTasks'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/exports/{exportId}/tasks  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'   -H 'Content-Type:application/json'  -d '{\"localeName\": \"en_US\"}'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nBody\n{\"localeName\": \"en_US\"}\nParameters\nParameter Description\nworkspaceId\
+          \ \n"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/exports/{exportid}/tasks/{taskid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_exports_exportid_tasks_taskid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/exports/{exportid}/tasks/{taskid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: exportid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/exports/{exportId}/tasks/{taskId}  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}:
+    delete:
+      operationId: delete_2_0_workspaces_workspaceid_models_modelid_files_fileid
+      tags:
+      - '2'
+      summary: DELETE /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fileid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Delete20WorkspacesWorkspaceidModelsModelidFilesFileidRespons'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/files/{fileId}  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nContent-Type:application/json\n\
+          Parameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c8"
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_files_fileid
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fileid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidFilesFileidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/files/{fileId}  -H 'Authorization: AnaplanAuthToken\
+          \ auth_token'  -H 'Content-Type: application/json'  -d '{\"chunkCount\":1}'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n\
+          Exam"
+    put:
+      operationId: put_2_0_workspaces_workspaceid_models_modelid_files_fileid
+      tags:
+      - '2'
+      summary: PUT /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fileid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/files/{fileId}  -H 'authorization: AnaplanAuthToken\
+          \ {auth_token}'  -H 'Content-Type:application/octet-stream' --upload-file Tests.txt\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/octet-stream\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The "
+  /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/chunks:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_files_fileid_chunks
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/chunks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fileid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/files/{fileId}/chunks  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n\
+          Example: 8a8"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/chunks/0:
+    put:
+      operationId: put_2_0_workspaces_workspaceid_models_modelid_files_fileid_chunks_0
+      tags:
+      - '2'
+      summary: PUT /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/chunks/0
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fileid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/files/{fileId}/chunks/0  -H 'authorization:\
+          \ AnaplanAuthToken auth_token'  -H 'Content-Type:application/octet-stream' --upload-file chunk-aa\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/octet-stream\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\n\
+          Description"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/chunks/{chunkid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_files_fileid_chunks_chunkid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/chunks/{chunkid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fileid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: chunkid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidFilesFileidChunksChun'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/files/{fileId}/chunks/{chunkId}  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n\
+          Ex"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/complete:
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_files_fileid_complete
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/files/{fileid}/complete
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fileid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidFilesFileidCompleteR'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/files/{fileId}/complete  -H ''authorization:
+          AnaplanAuthToken {anaplan_auth_token}''  -H ''Content-Type:application/json''  -d ''{"id":"113000000008","name":"Tests.txt","chunkCount"
+          : 1,"firstDataRow":2,"headerRow":1}''
+
+          Headers
+
+          Authorization:AnaplanAuthToken {anaplan_auth_token}
+
+          Content-Type:application/json
+
+          Parameters
+
+          P'
+  /2/0/workspaces/{workspaceid}/models/{modelid}/imports:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_imports
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/imports
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/imports  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nContent-Type:application/json\n\
+          Parameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c8d8e8f8g8i\n"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_imports_importid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: importid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidImportsImportidRespon'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/imports/{importId}  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nContent-Type:application/json\n\
+          Parameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_imports_importid_tasks_taskid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: importid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/imports/{importId}/tasks/{taskId}  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\n\
+          Content-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\n"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}/dump:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_imports_importid_tasks_taskid_dump
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}/dump
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: importid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidImportsImportidTasksT'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/imports/{importId}/tasks/{taskId}/dump\n\
+          -H authorization:'AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription:\
+          \ The workspace "
+  /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}/dump/chunks:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_imports_importid_tasks_taskid_dump
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}/dump/chunks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: importid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/imports/{importId}/tasks/{taskId}/dump/chunks\n\
+          -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription:\
+          \ The wo"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}/dump/chunks/0:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_imports_importid_tasks_taskid_dump
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/imports/{importid}/tasks/{taskid}/dump/chunks/0
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: importid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/imports/{importId}/tasks/{taskId}/dump/chunks/0\n\
+          -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription:\
+          \ The "
+  /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/items:
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_lists_listid_items
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/items
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: action
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/lists/{listId}/items?action=add'  -H 'Authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type: application/json'  -H 'Accept: application/json'\nRequest headers\nHeader\
+          \ Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-Type:\
+          \ ap"
+    put:
+      operationId: put_2_0_workspaces_workspaceid_models_modelid_lists_listid_items
+      tags:
+      - '2'
+      summary: PUT /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/items
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/lists/{listId}/items'  -H 'Authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type: application/json'  -H 'Accept: application/json'\nRequest headers\nHeader\
+          \ Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-Type:\
+          \ application/js"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/preview:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_lists_listid_preview
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/preview
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidListsListidPreviewRes'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request GET
+
+          ''https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/lists/{listId}/preview''
+
+          -H ''Authorization: {anaplan_auth_token}''
+
+          -H ''Accept: text/csv''
+
+          Request Headers
+
+          Header Required Details
+
+          Authorization: AnaplanAuthToken {anaplan_auth_token} Yes The Anaplan authentication token
+
+          Accept: text/csv Yes This indicates the preferred response is text/csv format.
+
+          Req'
+  /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/readRequests/{requestid}:
+    delete:
+      operationId: delete_2_0_workspaces_workspaceid_models_modelid_lists_listid_readRequests_reque
+      tags:
+      - '2'
+      summary: DELETE /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/readRequests/{requestid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: requestid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Delete20WorkspacesWorkspaceidModelsModelidListsListidReadreq'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/lists/{listId}/readRequests/{requestId}'\
+          \  -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type: application/json'  -H 'Accept: application/json'\nRequest\
+          \ headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication\
+          \ token\nAccept"
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_lists_listid_readRequests_request
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/readRequests/{requestid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: requestid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidListsListidReadreque'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST /'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/lists/{listId}/readRequests/{requestID}'\
+          \ /\n-H 'Authorization: AnaplanAuthToken {anaplan_auth_token}' /\n-H 'Content-Type: application/json' /\n-H 'Accept: application/json'\n\
+          Request headers\nHeader Details\nAuthorization: AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication\
+          \ token\nCont"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/readRequests/{requestid}/pages/{pageno}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_lists_listid_readRequests_requesti
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/lists/{listid}/readRequests/{requestid}/pages/{pageno}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: listid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: requestid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: pageno
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidListsListidReadreques'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --{location}  -X GET 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/lists/{listId}/readRequests/{requestId}/pages/{pageNo}'\
+          \  -H 'Authorization: AnaplanAuthToken{anaplan_auth_token}'  -H 'Accept: text/csv'\nRequest headers\nHeader Details\nAuthorization:\
+          \ AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nAccept: text/csv \nRequired"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/optimizeActions/{actionid}/tasks/{correlationid}/solutionLogs:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_optimizeActions_actionid_tasks_cor
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/optimizeActions/{actionid}/tasks/{correlationid}/solutionLogs
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: correlationid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/optimizeActions/{actionId}/tasks/{correlationId}/solutionLogs\
+          \  -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'\n-H 'Accept:text/plain'\nHeaders\nHeader Details\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token} \nRequired\nDescription: The Anaplan authentication token\nContent-Type:text/plain \nRequired\nDescript"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/processes:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_processes
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/processes
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidProcessesResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/processes  -H 'authorization: AnaplanAuthToken\
+          \ {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken {anaplan_auth_token}\nContent-Type:application/json\n\
+          Parameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace ID\nExample: 8a8b8c8d8e8f8g8"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_processes_processid_tasks
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: processid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/processes/{processId}/tasks  -H 'authorization:\
+          \ AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\n'Authorization:AnaplanAuthToken {anaplan_auth_token}'\n\
+          'Content-Type:application/json'\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription: The workspace\
+          \ ID\nEx"
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_processes_processid_tasks
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: processid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidProcessesProcessidTa'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/processes/{processId}/tasks
+
+          -H ''authorization: AnaplanAuthToken {anaplan_auth_token}''  -H ''Content-Type:application/json''  -d ''{"localeName": "en_US"}''
+
+          Headers
+
+          Authorization:AnaplanAuthToken {anaplan_auth_token}
+
+          Content-Type:application/json
+
+          Body
+
+          {"localeName": "en_US"}
+
+          Parameters
+
+          Parameter Description
+
+          workspaceId '
+  /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_processes_processid_tasks_taskid
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: processid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET /
+
+          https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/processes/{processId}/tasks/{taskId}  -H ''authorization: AnaplanAuthToken
+          {anaplan_auth_token}''  -H ''Content-Type:application/json''
+
+          Headers
+
+          Authorization:AnaplanAuthToken {anaplan_auth_token} Content-Type:application/json
+
+          Parameters
+
+          Parameter Required Type Description
+
+          workspaceId Yes string The workspace ID. Exampl'
+  /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}/dumps/{objectid}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_processes_processid_tasks_taskid_d
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}/dumps/{objectid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: processid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: objectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/processes/{processId}/tasks/{taskId}/dumps/{objectId}\
+          \  -H authorization:'AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDescription"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}/dumps/{objectid}/chunks:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_processes_processid_tasks_taskid_d
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}/dumps/{objectid}/chunks
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: processid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: objectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/processes/{processId}/tasks/{taskId}/dumps/{objectId}/chunks\
+          \  -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nDes"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}/dumps/{objectid}/chunks/0:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_processes_processid_tasks_taskid_d
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/processes/{processid}/tasks/{taskid}/dumps/{objectid}/chunks/0
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: processid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: taskid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: objectid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/processes/{processId}/tasks/{taskId}/dumps/{objectId}/chunks/0\
+          \  -H 'authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Content-Type:application/json'\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nContent-Type:application/json\nParameters\nParameter Description\nworkspaceId \nRequired\nType: string\nD"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/views/{viewid}/readRequests:
+    post:
+      operationId: post_2_0_workspaces_workspaceid_models_modelid_views_viewid_readRequests
+      tags:
+      - '2'
+      summary: POST /2/0/workspaces/{workspaceid}/models/{modelid}/views/{viewid}/readRequests
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: viewid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidViewsViewidReadreque'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post20WorkspacesWorkspaceidModelsModelidViewsViewidReadreque2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location --request POST ''https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/views/{viewId}/readRequests/''  --header
+          ''Authorization: AnaplanAuthToken AnaplanToken''  --header ''Accept: application/json''
+
+          --data-raw ''{
+
+          "exportType" : "TABULAR_MULTI_COLUMN"
+
+          }''
+
+          Request Body
+
+          This API supports exporting data in the following formats:
+
+          Type Description More information
+
+          GRID_ALL_PAGE'
+  /2/0/workspaces/{workspaceid}/models/{modelid}/views/{viewid}/readRequests/{requestid}:
+    delete:
+      operationId: delete_2_0_workspaces_workspaceid_models_modelid_views_viewid_readRequests_reque
+      tags:
+      - '2'
+      summary: DELETE /2/0/workspaces/{workspaceid}/models/{modelid}/views/{viewid}/readRequests/{requestid}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: viewid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: requestid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Delete20WorkspacesWorkspaceidModelsModelidViewsViewidReadreq'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X DELETE 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/views/{viewId}/readRequests/{requestId}'\
+          \  -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Accept: application/json'\nRequest headers\nHeader Details\nAuthorization:\
+          \ AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token.\nAccept: application/json \nOptional\n\
+          Descrip"
+  /2/0/workspaces/{workspaceid}/models/{modelid}/views/{viewid}/readRequests/{requestid}/pages/{pageno}:
+    get:
+      operationId: get_2_0_workspaces_workspaceid_models_modelid_views_viewid_readRequests_requesti
+      tags:
+      - '2'
+      summary: GET /2/0/workspaces/{workspaceid}/models/{modelid}/views/{viewid}/readRequests/{requestid}/pages/{pageno}
+      x-source: https://anaplan.docs.apiary.io
+      parameters:
+      - name: workspaceid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modelid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: viewid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: requestid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: pageno
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Get20WorkspacesWorkspaceidModelsModelidViewsViewidReadreques2'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --{location}  -X GET 'https://api.anaplan.com/2/0/workspaces/{workspaceId}/models/{modelId}/views/{viewId}/readRequests/{requestId}/pages/{pageNo}'\
+          \  -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'  -H 'Accept: text/csv'\nRequest headers\nHeader Details\nAuthorization:\
+          \ AnaplanAuthToken {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token.\nAccept: text/csv \nRequir"
+  /ResourceTypes:
+    get:
+      operationId: get_ResourceTypes
+      tags:
+      - Resourcetypes
+      summary: Use this call to retrieve all of the resource types supported.
+      x-source: https://scimapi.docs.apiary.io
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetResourcetypesResponse'
+      x-evidence:
+        kind: documentation
+  /Schemas:
+    get:
+      operationId: get_Schemas
+      tags:
+      - Schemas
+      summary: Use this call to obtain the supported attributes for resources and the attribute meta-data.
+      x-source: https://scimapi.docs.apiary.io
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetSchemasResponse'
+      x-evidence:
+        kind: documentation
+  /ServiceProviderConfig:
+    get:
+      operationId: get_ServiceProviderConfig
+      tags:
+      - Serviceproviderconfig
+      summary: Use this call to retrieve the supported SCIM capabilities.
+      x-source: https://scimapi.docs.apiary.io
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetServiceproviderconfigResponse'
+      x-evidence:
+        kind: documentation
+  /Users:
+    get:
+      operationId: get_Users
+      tags:
+      - Users
+      summary: Use this endpoint to search for users and associated workspaces.
+      x-source: https://scimapi.docs.apiary.io
+      parameters:
+      - name: filter
+        in: query
+        required: false
+        schema:
+          type: string
+        description: A filter expression to restrict the result set in the form of <field> <operator> <value>
+      - name: startIndex
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: The pagination index to start with for the response
+      - name: count
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: The pagination count per response
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUsersResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_Users
+      tags:
+      - Users
+      summary: Use this call to add a user, their name details, and their workspace entitlements.
+      x-source: https://scimapi.docs.apiary.io
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostUsersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostUsersResponse'
+      x-evidence:
+        kind: documentation
+  /Users/{id}:
+    get:
+      operationId: get_Users_id
+      tags:
+      - Users
+      summary: Use this endpoint to retrieve all user information and associated workspaces.
+      x-source: https://scimapi.docs.apiary.io
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetUsersIdResponse'
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_Users_id
+      tags:
+      - Users
+      summary: Use this API request to edit user details using SCIM's rich patch specification based upon JSON Patch.
+      x-source: https://scimapi.docs.apiary.io
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchUsersIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchUsersIdResponse'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_Users_id
+      tags:
+      - Users
+      summary: Send the full desired user state, but workspace entitlements omission may remove the user from associated workspaces.
+      x-source: https://help.anaplan.com/get-started-with-the-anaplan-scim-api-7352b06c-d843-4efc-9906-d91d53ffcd9c
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /admin/1/0/users/export:
+    get:
+      operationId: get_admin_1_0_users_export
+      tags:
+      - Admin
+      summary: GET /admin/1/0/users/export
+      x-source: https://help.anaplan.com/export-users-to-csv-d297283b-17ba-4830-883f-60e1883d2e2b
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET 'https://api.anaplan.com/admin/1/0/users/export' \n -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'  -H\
+          \ 'Accept: text/csv' Response \n Success \n A successful request returns an HTTP 200 response, and a CSV-formatted file containing the\
+          \ user data. \n Failure \n If the request is unsuccessful, the API returns an error code. \n ErrorCode ErrorMessage Description 400\
+          \ INVALID Invalid r"
+  /admin/1/0/users/import:
+    put:
+      operationId: put_admin_1_0_users_import
+      tags:
+      - Admin
+      summary: PUT /admin/1/0/users/import
+      x-source: https://help.anaplan.com/bulk-create-or-update-users-with-a-csv-20e16ec3-af9e-4e23-a960-088d00ce45df
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X PUT 'https://api.anaplan.com/admin/1/0/users/import'  -H 'Authorization: AnaplanAuthToken {anaplan_auth_token}'  -H\
+          \ \"Content-Type: multipart/form-data\"  -F \"file=@users_chunk1.csv\" Response \n Success \n If the request is successful, the API\
+          \ returns an HTTP 207 multi-status code. \n Success code Response Description 207 accepted Number of records found in the uploaded file.\
+          \ created Number of "
+  /api/v2305.1/metadata/Dimensions/users:
+    get:
+      operationId: get_api_v2305_1_metadata_Dimensions_users
+      tags:
+      - Api
+      summary: Manage user roles and permissions, get a list of users, add, update, remove, and assign roles to individual users in your tenant.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2305.1/models/Consolidations/Dimensions/metadata:
+    get:
+      operationId: get_api_v2305_1_models_Consolidations_Dimensions_metadata
+      tags:
+      - Api
+      summary: Retrieve a list of all dimensions, including parent-child relationships and attributes, across a tenant, or the properties of a
+        dimension you specify.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2305.1/odata:
+    get:
+      operationId: get_api_v2305_1_odata
+      tags:
+      - Api
+      summary: Access OData endpoint to retrieve, update, delete, and add data records.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2305.1/odata/ClientPathParam/process:
+    get:
+      operationId: get_api_v2305_1_odata_ClientPathParam_process
+      tags:
+      - Api
+      summary: Manage process workflows in Financial Consolidation, and enables you to start, stop, or get the state of a workflow.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2305.1/odata/ClientSchemaTable:
+    get:
+      operationId: get_api_v2305_1_odata_ClientSchemaTable
+      tags:
+      - Api
+      summary: Retrieve data from the ClientSchemaTable using OData protocol.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2305.1/odata/Consolidation:
+    get:
+      operationId: get_api_v2305_1_odata_Consolidation
+      tags:
+      - Api
+      summary: Retrieve data from the Consolidation OData table.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_v2305_1_odata_Consolidation
+      tags:
+      - Api
+      summary: POST /api/v2305.1/odata/Consolidation
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      parameters:
+      - name: Account_Name
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location POST 'https://fluenceapi-prod.fluence.app/api/v2305.1/odata/Consolidation?Account_Name=1110'  --header 'Tenant:\
+          \ CustomerTenant'  --header 'Content-Type: application/json'  --header 'X-API-TOKEN: ••••••'  --data '{ \n     \"Account_Name\": \"\
+          1110\", \n     \"Audit_Name\": \"Input\", \n     \"CostCenter_Name\": \"105\", \n     \"Currency_Name\": \"USD\", \n     \"DataView_Name\"\
+          : \"Value\", \n     \"Date_Name\""
+    put:
+      operationId: put_api_v2305_1_odata_Consolidation
+      tags:
+      - Api
+      summary: PUT /api/v2305.1/odata/Consolidation
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      parameters:
+      - name: Account_Name
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location --request PUT 'https://fluenceapi-prod.fluence.app/api/v2305.1/odata/Consolidation?Account_Name=1110'  --header\
+          \ 'Tenant: CustomerTenant'  --header 'Content-Type: application/json'  --header 'X-API-TOKEN: ••••••'  In the example above, we have\
+          \ three headers: \n Tenant :  The tenant where your data resides. \n Content-Type :  the data format sent in the request body. This\
+          \ case specifie"
+  /api/v2305.1/process/start/ImportandExports/Data/ModelExport/models:
+    get:
+      operationId: get_api_v2305_1_process_start_ImportandExports_Data_ModelExport_models
+      tags:
+      - Api
+      summary: Retrieve a list of dimensions, within a specific model.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/v2305.1/users:
+    get:
+      operationId: get_api_v2305_1_users
+      tags:
+      - Api
+      summary: Manage user roles and permissions, get a list of users, add, update, remove, and assign roles to individual users in your tenant.
+      x-source: https://help.anaplan.com/structure-of-an-api-request-bcddc03e-9c46-4174-9bae-347cf77a45d4
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /audit/api/1/events:
+    get:
+      operationId: get_audit_api_1_events
+      tags:
+      - Audit
+      summary: GET /audit/api/1/events
+      x-source: https://auditservice.docs.apiary.io
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAuditApi1EventsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H authorization:''AnaplanAuthToken {anaplan_auth_token}''
+
+          -H "Content-Type:application/json" https://audit.anaplan.com/audit/api/1/events
+
+          Headers
+
+          Header Required Description
+
+          Authorization: AnaplanAuthToken {anaplan_auth_token} Yes The Anaplan authentication token
+
+          Accept: application/json Optional This indicates the preferred response is application/json format. Note that this call only outputs'
+    post:
+      operationId: post_audit_api_1_events
+      tags:
+      - Audit
+      summary: POST /audit/api/1/events
+      x-source: https://auditservice.docs.apiary.io
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAuditApi1EventsRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAuditApi1EventsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl POST -H authorization:'AnaplanAuthToken {anaplan_auth_token}' -H \"Content-Type:application/json\" -d '{\"from\": 1489608511000,\"\
+          to\" : 1505776337000, \"interval\" : 24}' https://audit.anaplan.com/audit/api/1/events\nHeaders\nHeader Details\nauthorization: AnaplanAuthToken\
+          \ {anaplan_auth_token} \nRequired\nDescription: the Anaplan authentication token\nContent-type: application/json \nOptional\nDescription: "
+  /audit/api/1/events/search:
+    get:
+      operationId: get_audit_api_1_events_search
+      tags:
+      - Audit
+      summary: Retrieves the audit events in the database for the tenant to which your user is associated based on query parameters for from,
+        to, and interval.
+      x-source: https://auditservice.docs.apiary.io
+      parameters:
+      - name: type
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Type of events to return: all, byok, or user_activity'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAuditApi1EventsSearchResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_audit_api_1_events_search
+      tags:
+      - Audit
+      summary: POST /audit/api/1/events/search
+      x-source: https://auditservice.docs.apiary.io
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAuditApi1EventsSearchRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAuditApi1EventsSearchResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl POST -H authorization:''AnaplanAuthToken {anaplan_auth_token}'' -H "Content-Type:application/json" -H "Accept:text/plain"
+          -d ''{"from": 1489608511000,"to" : 1505776337000, "interval" : 24}'' https://audit.anaplan.com/audit/api/1/events/search
+
+          Headers
+
+          Header Required Description
+
+          authorization: AnaplanAuthToken {anaplan_auth_token} Yes The Anaplan authentication token
+
+          Content-type: application/json'
+  /events:
+    get:
+      operationId: get_events
+      tags:
+      - Events
+      summary: Retrieves the audit events in the database for the tenant to which your user is associated.
+      x-source: https://auditservice.docs.apiary.io
+      parameters:
+      - name: type
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Type of events to return: all, byok, or user_activity'
+      - name: dateFrom
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Start of a range of events to return in milliseconds UTC
+      - name: dateTo
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: End of a range of events to return in milliseconds UTC
+      - name: intervalInHours
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Number of previous hours of events from now to return
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Limit for the number of results to return per page
+      - name: offset
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Offset to get a specific page of results
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetEventsResponse'
+      x-evidence:
+        kind: documentation
+  /events/search:
+    post:
+      operationId: post_events_search
+      tags:
+      - Events
+      summary: 'Retrieves the audit events in the database for the tenant to which your user is associated based on whether you specify these
+        in the body: from, to, and interval.'
+      x-source: https://auditservice.docs.apiary.io
+      parameters:
+      - name: type
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Type of events to return: all, byok, or user_activity'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostEventsSearchRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEventsSearchResponse'
+      x-evidence:
+        kind: documentation
+  /odata/{clienttablename}:
+    get:
+      operationId: get_odata_clienttablename
+      tags:
+      - Odata
+      summary: Use this OData endpoint to retrieve information from the Anaplan Financial Consolidation server's client schema table.
+      x-source: https://help.anaplan.com/480986d3-a907-4675-9cdf-1392e95e1a20
+      parameters:
+      - name: clienttablename
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: '{filterparameter}'
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter parameter. See Query parameters.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOdataClienttablenameResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_odata_clienttablename
+      tags:
+      - Odata
+      summary: Use the POST method to insert financial records, such as budget or forecast data for a particular accounting period or entity,
+        into a client schema table.
+      x-source: https://help.anaplan.com/e1cdae2e-e07a-4e13-819a-6f378d5f7088
+      parameters:
+      - name: clienttablename
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOdataClienttablenameRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /scim/1/0/v2/ResourceTypes:
+    get:
+      operationId: get_scim_1_0_v2_ResourceTypes
+      tags:
+      - Scim
+      summary: GET /scim/1/0/v2/ResourceTypes
+      x-source: https://scimapi.docs.apiary.io
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetScim10V2ResourcetypesResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET https://api.anaplan.com/scim/1/0/v2/ResourceTypes\nResponse header\nHeader Details\nContent-Type: application/json\
+          \ The response body is formatted as application/scim+json.\nResponse body\n{\n \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"\
+          ],\n \"totalResults\": 1,\n \"startIndex\": 1,\n \"itemsPerPage\": 50,\n \"Resources\": [{\n \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:Resourc"
+  /scim/1/0/v2/Schemas:
+    get:
+      operationId: get_scim_1_0_v2_Schemas
+      tags:
+      - Scim
+      summary: GET /scim/1/0/v2/Schemas
+      x-source: https://scimapi.docs.apiary.io
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET https://api.anaplan.com/scim/1/0/v2/Schemas\nRequest parameters\nNone\nResponse header\nHeader Details\nContent-Type:\
+          \ application/json The response body is formatted as application/scim+json.\nResponse body\nBelow is an example to illustrate format,\
+          \ use the actual API to determine the Attribute Meta Data used by the API. See:\nhttp://api.anaplan.com/scim/1/0/v2/Schemas\n HTTP/1.1\
+          \ 200 OK\n Conten"
+  /scim/1/0/v2/ServiceProviderConfig:
+    get:
+      operationId: get_scim_1_0_v2_ServiceProviderConfig
+      tags:
+      - Scim
+      summary: GET /scim/1/0/v2/ServiceProviderConfig
+      x-source: https://scimapi.docs.apiary.io
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetScim10V2ServiceproviderconfigResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET https://api.anaplan.com/scim/1/0/v2/ServiceProviderConfig\nResponse header\nHeader Details\nContent-Type: application/json\
+          \ The response body is formatted as application/scim+json.\nResponse body\nIn this example, values are set to false. For the current\
+          \ settings see:\nhttps://api.anaplan.com/scim/1/0/v2/ServiceProviderConfig\n HTTP/1.1 200 OK\n Content-Type: application/scim+json\n\
+          \ Location: ht"
+  /scim/1/0/v2/User:
+    post:
+      operationId: post_scim_1_0_v2_User
+      tags:
+      - Scim
+      summary: POST /scim/1/0/v2/User
+      x-source: https://scimapi.docs.apiary.io
+      parameters:
+      - name: filter
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostScim10V2UserResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST -H ''Authorization: BASIC <username:password base64 encoded>'' https://api.anaplan.com/scim/1/0/v2/User?filter=givenName
+
+          Eq "John"&startIndex=1&count=100
+
+          Response header
+
+          Header Details
+
+          Content-Type: application/json The response body is formatted as application/scim+json.
+
+          Location The resource URL
+
+          Example:
+
+          https://api.anaplan.com/scim/1/0/v2/Users/2819c223-7f76-453a-919d-413861904646
+
+          Re'
+  /scim/1/0/v2/Users:
+    get:
+      operationId: get_scim_1_0_v2_Users
+      tags:
+      - Scim
+      summary: GET /scim/1/0/v2/Users
+      x-source: https://help.anaplan.com/how-to-implement-scim-6f127888-9b62-4ff1-8c5b-7a91be0f2d66
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET  -H 'Authorization: BASIC dXNlcm5hbWU6cGFzc3dvcmQ='  https://api.anaplan.com/scim/1/0/v2/Users \n Method B: Anaplan\
+          \ auth token \n This is a two-step process using a temporary bearer token generated by Anaplan's authentication service. \n Generate\
+          \ the Token: Get an authentication token using either username/password basic auth or a pre-registered CA certificate . \n Call the\
+          \ SCIM API: Pass "
+    post:
+      operationId: post_scim_1_0_v2_Users
+      tags:
+      - Scim
+      summary: Use this call to add a user, their name details, and their workspace entitlements.
+      x-source: https://scimapi.docs.apiary.io
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostScim10V2UsersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostScim10V2UsersResponse'
+      x-evidence:
+        kind: documentation
+  /token/authenticate:
+    get:
+      operationId: get_token_authenticate
+      tags:
+      - Token
+      summary: Create an authentication token using a username and password or certificate authentication.
+      x-source: https://anaplanauthentication.docs.apiary.io
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: Basic {Base64-encoded username:password} or CACertificate {your_CA_certificate}
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTokenAuthenticateResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_token_authenticate
+      tags:
+      - Token
+      summary: POST /token/authenticate
+      x-source: https://anaplanauthentication.docs.apiary.io
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTokenAuthenticateResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST -H authorization:'CACertificate {your_CA_certificate}' -H \"Content-Type:application/json\" -d '{\"encodedData\"\
+          : {encoded_string},\n\"encodedSignedData\" : {encoded_signed_string}} https://auth.anaplan.com/token/authenticate\nHeaders\nAuthorization:CACertificate\
+          \ {your_CA_certificate}\nBody\n {\n \"encodedData\": \"{encoded_string}\",\n \"encodedSignedData\" : {encoded_signed_string}\n }\nResponse\
+          \ 200 (ap"
+  /token/logout:
+    get:
+      operationId: get_token_logout
+      tags:
+      - Token
+      summary: Deletes an authentication token.
+      x-source: https://anaplanauthentication.docs.apiary.io
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: AnaplanAuthToken {anaplan_auth_token}
+      responses:
+        '204':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_token_logout
+      tags:
+      - Token
+      summary: POST /token/logout
+      x-source: https://anaplanauthentication.docs.apiary.io
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST -H authorization:''AnaplanAuthToken {anaplan_auth_token}'' https://auth.anaplan.com/token/logout
+
+          Header
+
+          Authorization: AnaplanAuthToken {anaplan_auth_token}
+
+          Response 204 (application/json)'
+  /token/refresh:
+    get:
+      operationId: get_token_refresh
+      tags:
+      - Token
+      summary: Generates a new authentication token from an existing token.
+      x-source: https://anaplanauthentication.docs.apiary.io
+      parameters:
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: AnaplanAuthToken {anaplan_auth_token}
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTokenRefreshResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_token_refresh
+      tags:
+      - Token
+      summary: POST /token/refresh
+      x-source: https://anaplanauthentication.docs.apiary.io
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTokenRefreshResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST -H authorization:'AnaplanAuthToken {anaplan_auth_token}' https://auth.anaplan.com/token/refresh\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nResponse 200 (application/json)\n{\n \"meta\": {\n \"validationUrl\": \"https://auth.anaplan.com/token/validate\
+          \ \"\n },\n \"status\": \"SUCCESS\",\n \"statusMessage\": \"Token refreshed\",\n \"tokenInfo\": {\n \"expiresAt\": 1509725972924,\n\
+          \ \"tokenId\": \"4d68"
+  /token/validate:
+    get:
+      operationId: get_token_validate
+      tags:
+      - Token
+      summary: GET /token/validate
+      x-source: https://anaplanauthentication.docs.apiary.io
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetTokenValidateResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl GET -H authorization:'AnaplanAuthToken {anaplan_auth_token}' https://auth.anaplan.com/token/validate\nHeaders\nAuthorization:AnaplanAuthToken\
+          \ {anaplan_auth_token}\nResponse 200 (application/json)\n{\n \"meta\": {\n \"validationUrl\": \"https://auth.anaplan.com/token/validate\"\
+          \n },\n \"status\": \"SUCCESS\",\n \"statusMessage\": \"Token validated\",\n \"userInfo\": {\n \"userGuid\": \"8a89d9999f3c7099015f999d5208458a\"\
+          ,\n \""
+components:
+  schemas:
+    Get20IntegrationflowsResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+    Post20IntegrationflowsIntegrationflowidRunRequest:
+      type: object
+      properties:
+        stepsToRun:
+          type: array
+    Post20IntegrationflowsIntegrationflowidRunResponse:
+      type: object
+      properties:
+        status:
+          type: object
+        status.code:
+          type: integer
+        status.message:
+          type: string
+        run:
+          type: object
+        run.id:
+          type: string
+    Post20IntegrationflowsIntegrationflowidRunResponse2:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+    Post20IntegrationflowsResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        version:
+          type: string
+        type:
+          type: string
+        steps:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              referrer:
+                type: string
+              isSkipped:
+                type: boolean
+              exceptionBehavior:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    strategy:
+                      type: string
+    Get20IntegrationsResponse:
+      type: object
+      properties:
+        status:
+          type: object
+        integrations:
+          type: array
+        meta:
+          type: object
+    Get20IntegrationsConnectionsConnectionidResponse:
+      type: object
+      properties:
+        status:
+          type: object
+    Put20IntegrationsNotificationNotificationidResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+    Post20IntegrationsNotificationResponse:
+      type: object
+      properties:
+        integrationIds:
+          type: array
+          items:
+            type: string
+        channels:
+          type: array
+          items:
+            type: string
+        notifications:
+          type: object
+          properties:
+            config:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  users:
+                    type: array
+                    items:
+                      type: string
+    Post20IntegrationsIntegrationidCancelResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: object
+    Post20IntegrationsIntegrationidRunResponse:
+      type: object
+      properties:
+        status:
+          type: object
+        run:
+          type: object
+    Delete20IntegrationsIntegrationidScheduleResponse:
+      type: object
+      properties:
+        status:
+          type: object
+        status.code:
+          type: integer
+        status.message:
+          type: string
+    Post20IntegrationsIntegrationidScheduleRequest:
+      type: object
+      properties:
+        integrationId:
+          type: string
+        schedule:
+          type: object
+        schedule.name:
+          type: string
+        schedule.type:
+          type: string
+        schedule.time:
+          type: string
+        schedule.daysOfWeek:
+          type: array
+        schedule.dayOfMonth:
+          type: integer
+        schedule.repeatEvery:
+          type: integer
+        schedule.fromTime:
+          type: string
+        schedule.toTime:
+          type: string
+        schedule.startDate:
+          type: string
+        schedule.endDate:
+          type: string
+        schedule.timezone:
+          type: string
+      required:
+      - integrationId
+      - schedule
+      - schedule.name
+      - schedule.type
+      - schedule.startDate
+      - schedule.timezone
+    Post20IntegrationsIntegrationidScheduleResponse:
+      type: object
+      properties:
+        status:
+          type: object
+        status.code:
+          type: integer
+        status.message:
+          type: string
+    Get20IntegrationsIntegrationidScheduleStatusStatusResponse:
+      type: object
+      properties:
+        status:
+          type: object
+        status.code:
+          type: integer
+        status.message:
+          type: string
+    Post20IntegrationsIntegrationidCancelResponse2:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: object
+          properties:
+            integration_id:
+              type: string
+            state:
+              type: string
+    Post20IntegrationsIntegrationidRunResponse2:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: object
+          properties:
+            integration_id:
+              type: string
+            state:
+              type: string
+    Get20IntegrationsResponse2:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+    Get20ModelsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+            paging:
+              type: object
+              properties:
+                currentPageSize:
+                  type: integer
+                totalSize:
+                  type: integer
+                offset:
+                  type: integer
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        models:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              activeState:
+                type: string
+              lastSavedSerialNumber:
+                type: integer
+              lastModifiedByUserGuid:
+                type: string
+              memoryUsage:
+                type: integer
+              currentWorkspaceId:
+                type: string
+              currentWorkspaceName:
+                type: string
+              modelUrl:
+                type: string
+              categoryValues:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    attribute:
+                      type: string
+                    categoryId:
+                      type: string
+                    categoryName:
+                      type: string
+                    customerId:
+                      type: string
+              isoCreationDate:
+                type: string
+                format: date-time
+              lastModified:
+                type: string
+                format: date-time
+    Get20ModelsModelidListsListidItemsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+        status:
+          type: object
+        listItems:
+          type: array
+    Get20ModelsModelidResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        modelsDeleted:
+          type: integer
+        bulkDeleteModelsFailures:
+          type: array
+          items: {}
+    Post20ModelsModelidListsListidItemsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        deleted:
+          type: integer
+    Get20ModelsModelidViewsViewidDataResponse:
+      type: object
+      properties:
+        pages:
+          type: array
+          items:
+            type: string
+        columnCoordinates:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+        rows:
+          type: array
+          items:
+            type: object
+            properties:
+              rowCoordinates:
+                type: array
+                items:
+                  type: string
+              cells:
+                type: array
+                items:
+                  type: string
+    Get20WorkspacesWorkspaceidBulkdeletemodelsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+        status:
+          type: object
+        modelsDeleted:
+          type: integer
+        bulkDeleteModelsFailures:
+          type: array
+    Get20WorkspacesWorkspaceidModelsModelidModelcalendarFiscalye:
+      type: object
+      properties:
+        modelCalendar:
+          type: object
+        fiscalYear:
+          type: object
+        year:
+          type: string
+        startDate:
+          type: string
+        endDate:
+          type: string
+    Get20WorkspacesWorkspaceidModelsModelidViewsViewidReadreques:
+      type: object
+      properties:
+        meta:
+          type: object
+        status:
+          type: object
+        viewReadRequest:
+          type: object
+    Post20WorkspacesWorkspaceidBulkdeletemodelsRequest:
+      type: object
+      properties:
+        modelIdsToDelete:
+          type: array
+          items:
+            type: string
+    Post20WorkspacesWorkspaceidBulkdeletemodelsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        modelsDeleted:
+          type: integer
+        bulkDeleteModelsFailures:
+          type: array
+          items: {}
+    Get20WorkspacesWorkspaceidModelsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+            paging:
+              type: object
+              properties:
+                currentPageSize:
+                  type: integer
+                totalSize:
+                  type: integer
+                offset:
+                  type: integer
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        models:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              activeState:
+                type: string
+              lastSavedSerialNumber:
+                type: integer
+              lastModifiedByUserGuid:
+                type: string
+              memoryUsage:
+                type: integer
+              currentWorkspaceId:
+                type: string
+              currentWorkspaceName:
+                type: string
+              modelUrl:
+                type: string
+              categoryValues:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    attribute:
+                      type: string
+                    categoryId:
+                      type: string
+                    categoryName:
+                      type: string
+                    customerId:
+                      type: string
+              isoCreationDate:
+                type: string
+                format: date-time
+              lastModified:
+                type: string
+                format: date-time
+    Get20WorkspacesWorkspaceidModelsModelidActionsResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            paging:
+              type: object
+              properties:
+                currentPageSize:
+                  type: integer
+                offset:
+                  type: integer
+                totalSize:
+                  type: integer
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        actions:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              actionType:
+                type: string
+              name:
+                type: string
+    Get20WorkspacesWorkspaceidModelsModelidActionsActionidRespon:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        action:
+          type: object
+          properties:
+            id:
+              type: string
+            listId:
+              type: string
+            filterLineItemId:
+              type: string
+            actionType:
+              type: string
+            name:
+              type: string
+    Post20WorkspacesWorkspaceidModelsModelidActionsActionidTasks:
+      type: object
+      properties:
+        localeName:
+          type: string
+    Get20WorkspacesWorkspaceidModelsModelidExportsResponse:
+      type: object
+      properties:
+        localeName:
+          type: string
+    Get20WorkspacesWorkspaceidModelsModelidExportsExportidRespon:
+      type: object
+      properties:
+        localeName:
+          type: string
+    Post20WorkspacesWorkspaceidModelsModelidExportsExportidTasks:
+      type: object
+      properties:
+        localeName:
+          type: string
+    Delete20WorkspacesWorkspaceidModelsModelidFilesFileidRespons:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            paging:
+              type: object
+              properties:
+                currentPageSize:
+                  type: integer
+                offset:
+                  type: integer
+                totalSize:
+                  type: integer
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        actions:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              actionType:
+                type: string
+              name:
+                type: string
+    Post20WorkspacesWorkspaceidModelsModelidFilesFileidRequest:
+      type: object
+      properties:
+        chunkCount:
+          type: integer
+    Get20WorkspacesWorkspaceidModelsModelidFilesFileidChunksChun:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            paging:
+              type: object
+              properties:
+                currentPageSize:
+                  type: integer
+                offset:
+                  type: integer
+                totalSize:
+                  type: integer
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        actions:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              actionType:
+                type: string
+              name:
+                type: string
+    Post20WorkspacesWorkspaceidModelsModelidFilesFileidCompleteR:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        chunkCount:
+          type: integer
+        firstDataRow:
+          type: integer
+        headerRow:
+          type: integer
+    Get20WorkspacesWorkspaceidModelsModelidImportsImportidRespon:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        importMetadata:
+          type: object
+          properties:
+            name:
+              type: string
+            type:
+              type: string
+    Get20WorkspacesWorkspaceidModelsModelidImportsImportidTasksT:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        importMetadata:
+          type: object
+          properties:
+            name:
+              type: string
+            type:
+              type: string
+    Get20WorkspacesWorkspaceidModelsModelidListsListidPreviewRes:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        listReadRequest:
+          type: object
+          properties:
+            requestId:
+              type: string
+            requestState:
+              type: string
+            url:
+              type: string
+    Delete20WorkspacesWorkspaceidModelsModelidListsListidReadreq:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        listReadRequest:
+          type: object
+          properties:
+            requestId:
+              type: string
+            listId:
+              type: integer
+            requestState:
+              type: string
+            url:
+              type: string
+            successful:
+              type: boolean
+    Post20WorkspacesWorkspaceidModelsModelidListsListidReadreque:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        listReadRequest:
+          type: object
+          properties:
+            requestId:
+              type: string
+            requestState:
+              type: string
+            url:
+              type: string
+    Get20WorkspacesWorkspaceidModelsModelidListsListidReadreques:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        listReadRequest:
+          type: object
+          properties:
+            requestId:
+              type: string
+            listId:
+              type: integer
+            requestState:
+              type: string
+            url:
+              type: string
+            successful:
+              type: boolean
+    Put20WorkspacesWorkspaceidModelsModelidModelcalendarFiscalye:
+      type: object
+      properties:
+        year:
+          type: string
+    Put20WorkspacesWorkspaceidModelsModelidModelcalendarFiscalye2:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        modelCalendar:
+          type: object
+          properties:
+            fiscalYear:
+              type: object
+              properties:
+                year:
+                  type: string
+                startDate:
+                  type: string
+                  format: date
+                endDate:
+                  type: string
+                  format: date
+    Post20WorkspacesWorkspaceidModelsModelidOpenResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              moduleId:
+                type: string
+              moduleName:
+                type: string
+              id:
+                type: string
+              name:
+                type: string
+    Get20WorkspacesWorkspaceidModelsModelidProcessesResponse:
+      type: object
+      properties:
+        schema:
+          type: string
+    Post20WorkspacesWorkspaceidModelsModelidProcessesProcessidTa:
+      type: object
+      properties:
+        localeName:
+          type: string
+    Post20WorkspacesWorkspaceidModelsModelidViewsViewidReadreque:
+      type: object
+      properties:
+        exportType:
+          type: string
+    Post20WorkspacesWorkspaceidModelsModelidViewsViewidReadreque2:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        viewReadRequest:
+          type: object
+          properties:
+            requestId:
+              type: string
+            requestState:
+              type: string
+            url:
+              type: string
+    Delete20WorkspacesWorkspaceidModelsModelidViewsViewidReadreq:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        viewReadRequest:
+          type: object
+          properties:
+            requestId:
+              type: string
+            viewId:
+              type: integer
+            requestState:
+              type: string
+            url:
+              type: string
+            successful:
+              type: boolean
+    Get20WorkspacesWorkspaceidModelsModelidViewsViewidReadreques2:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            schema:
+              type: string
+        status:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        viewReadRequest:
+          type: object
+          properties:
+            requestId:
+              type: string
+            viewId:
+              type: integer
+            requestState:
+              type: string
+            url:
+              type: string
+            successful:
+              type: boolean
+    GetResourcetypesResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+        totalResults:
+          type: integer
+        startIndex:
+          type: integer
+        itemsPerPage:
+          type: integer
+        Resources:
+          type: array
+    GetSchemasResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+        totalResults:
+          type: integer
+        startIndex:
+          type: integer
+        itemsPerPage:
+          type: integer
+        Resources:
+          type: array
+    GetServiceproviderconfigResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+        documentationUrl:
+          type: string
+        patch:
+          type: object
+        bulk:
+          type: object
+        filter:
+          type: object
+        changePassword:
+          type: object
+        sort:
+          type: object
+        authenticationSchemes:
+          type: array
+        meta:
+          type: object
+    GetUsersResponse:
+      type: object
+      properties:
+        totalResults:
+          type: integer
+        startIndex:
+          type: integer
+        itemsPerPage:
+          type: integer
+        Resources:
+          type: array
+    PostUsersRequest:
+      type: object
+      properties:
+        schemas:
+          type: array
+        userName:
+          type: string
+          description: The email login
+        externalId:
+          type: string
+          description: Your unique id for this user
+        active:
+          type: boolean
+        name:
+          type: object
+          description: User name object with formatted, familyName, givenName
+        displayName:
+          type: string
+        entitlements:
+          type: array
+          description: Workspace entitlements
+      required:
+      - schemas
+      - userName
+      - name
+    PostUsersResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+        id:
+          type: string
+        externalId:
+          type: string
+        active:
+          type: boolean
+        meta:
+          type: object
+        name:
+          type: object
+        displayName:
+          type: string
+        userName:
+          type: string
+        entitlements:
+          type: array
+    GetUsersIdResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+        id:
+          type: string
+        externalId:
+          type: string
+        active:
+          type: boolean
+        userName:
+          type: string
+        meta:
+          type: object
+        name:
+          type: object
+        entitlements:
+          type: array
+    PatchUsersIdRequest:
+      type: object
+      properties:
+        schemas:
+          type: array
+        Operations:
+          type: array
+          description: Array of operations with op, path, and value
+      required:
+      - schemas
+      - Operations
+    PatchUsersIdResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+        id:
+          type: string
+        externalId:
+          type: string
+        active:
+          type: boolean
+        meta:
+          type: object
+        name:
+          type: object
+        displayName:
+          type: string
+    GetAuditApi1EventsResponse:
+      type: object
+      properties:
+        response:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              eventTypeId:
+                type: string
+              userId:
+                type: string
+              tenantId:
+                type: string
+              objectTenantId:
+                type: string
+              message:
+                type: string
+              hostName:
+                type: string
+              serviceVersion:
+                type: string
+              eventDate:
+                type: integer
+              eventTimeZone:
+                type: string
+              createdDate:
+                type: integer
+              createdTimeZone:
+                type: string
+              checksum:
+                type: string
+    PostAuditApi1EventsRequest:
+      type: object
+      properties:
+        from:
+          type: integer
+        to:
+          type: integer
+        interval:
+          type: integer
+    PostAuditApi1EventsResponse:
+      type: object
+      properties:
+        response:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              eventTypeId:
+                type: string
+              userId:
+                type: string
+              tenantId:
+                type: string
+              objectTenantId:
+                type: string
+              message:
+                type: string
+              hostName:
+                type: string
+              serviceVersion:
+                type: string
+              eventDate:
+                type: integer
+              eventTimeZone:
+                type: string
+              createdDate:
+                type: integer
+              createdTimeZone:
+                type: string
+              checksum:
+                type: string
+    GetAuditApi1EventsSearchResponse:
+      type: object
+      properties:
+        response:
+          type: array
+          description: Array of audit event objects
+        meta:
+          type: object
+          description: Metadata including paging information
+        id:
+          type: integer
+          description: Event ID
+        eventTypeId:
+          type: string
+          description: Event type identifier
+        userId:
+          type: string
+          description: User ID that performed the action
+        tenantId:
+          type: string
+          description: Tenant ID
+        message:
+          type: string
+          description: Event message
+        eventDate:
+          type: integer
+          description: Event date in milliseconds UTC
+    PostAuditApi1EventsSearchRequest:
+      type: object
+      properties:
+        from:
+          type: integer
+        to:
+          type: integer
+        interval:
+          type: integer
+    PostAuditApi1EventsSearchResponse:
+      type: object
+      properties:
+        from:
+          type: string
+        to:
+          type: string
+        interval:
+          type: string
+    GetEventsResponse:
+      type: object
+      properties:
+        response:
+          type: array
+          description: Array of audit event objects
+        meta:
+          type: object
+          description: Metadata including paging information
+        id:
+          type: integer
+          description: Event ID
+        eventTypeId:
+          type: string
+          description: Event type identifier
+        userId:
+          type: string
+          description: User ID that performed the action
+        tenantId:
+          type: string
+          description: Tenant ID
+        message:
+          type: string
+          description: Event message
+        eventDate:
+          type: integer
+          description: Event date in milliseconds UTC
+    PostEventsSearchRequest:
+      type: object
+      properties:
+        from:
+          type: integer
+          description: Start of a range of events to return in milliseconds UTC
+        to:
+          type: integer
+          description: End of a range of events to return in milliseconds UTC
+        interval:
+          type: integer
+          description: Number of previous hours of events from now to return
+    PostEventsSearchResponse:
+      type: object
+      properties:
+        response:
+          type: array
+          description: Array of audit event objects
+        meta:
+          type: object
+          description: Metadata including paging information
+        id:
+          type: integer
+          description: Event ID
+        eventTypeId:
+          type: string
+          description: Event type identifier
+        userId:
+          type: string
+          description: User ID that performed the action
+        tenantId:
+          type: string
+          description: Tenant ID
+        message:
+          type: string
+          description: Event message
+        eventDate:
+          type: integer
+          description: Event date in milliseconds UTC
+    GetOdataClienttablenameResponse:
+      type: object
+      properties:
+        Account_Name:
+          type: string
+        Audit_Name:
+          type: string
+        CostCenter_Name:
+          type: string
+        Currency_Name:
+          type: string
+        DataView_Name:
+          type: string
+        Date_Name:
+          type: string
+        Entity_Name:
+          type: string
+        Intercompany_Name:
+          type: string
+        Movement_Name:
+          type: string
+        Product_Name:
+          type: string
+        Scenario_Name:
+          type: string
+        Amount:
+          type: number
+        Text:
+          type: string
+        Periodic_Amount:
+          type: number
+    PostOdataClienttablenameRequest:
+      type: object
+      properties:
+        Account_Name:
+          type: string
+        Audit_Name:
+          type: string
+        CostCenter_Name:
+          type: string
+        Currency_Name:
+          type: string
+        DataView_Name:
+          type: string
+        Date_Name:
+          type: string
+        Entity_Name:
+          type: string
+        Intercompany_Name:
+          type: string
+        Movement_Name:
+          type: string
+        Product_Name:
+          type: string
+        Scenario_Name:
+          type: string
+        Amount:
+          type: number
+        Text:
+          type: string
+        Periodic_Amount:
+          type: number
+    GetScim10V2ResourcetypesResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+          items:
+            type: string
+        totalResults:
+          type: integer
+        startIndex:
+          type: integer
+        itemsPerPage:
+          type: integer
+        Resources:
+          type: array
+          items:
+            type: object
+            properties:
+              schemas:
+                type: array
+                items:
+                  type: string
+              meta:
+                type: object
+                properties:
+                  resourceType:
+                    type: string
+                  location:
+                    type: string
+              id:
+                type: string
+              name:
+                type: string
+              endpoint:
+                type: string
+              description:
+                type: string
+              schema:
+                type: string
+    GetScim10V2ServiceproviderconfigResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+          items:
+            type: string
+        documentationUrl:
+          type: string
+        patch:
+          type: object
+          properties:
+            supported:
+              type: boolean
+        bulk:
+          type: object
+          properties:
+            supported:
+              type: boolean
+            maxOperations:
+              type: integer
+            maxPayloadSize:
+              type: integer
+        filter:
+          type: object
+          properties:
+            supported:
+              type: boolean
+            maxResults:
+              type: integer
+        changePassword:
+          type: object
+          properties:
+            supported:
+              type: boolean
+        sort:
+          type: object
+          properties:
+            supported:
+              type: boolean
+        authenticationSchemes:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              description:
+                type: string
+              specUrl:
+                type: string
+              documentationUrl:
+                type: string
+              type:
+                type: string
+              primary:
+                type: boolean
+        meta:
+          type: object
+          properties:
+            location:
+              type: string
+            resourceType:
+              type: string
+            created:
+              type: string
+              format: date-time
+            lastModified:
+              type: string
+              format: date-time
+    PostScim10V2UserResponse:
+      type: object
+      properties:
+        totalResults:
+          type: integer
+        startIndex:
+          type: integer
+        itemsPerPage:
+          type: integer
+        Resources:
+          type: array
+          items:
+            type: object
+            properties:
+              schemas:
+                type: array
+                items:
+                  type: string
+              meta:
+                type: object
+                properties:
+                  resourceType:
+                    type: string
+                  created:
+                    type: string
+                    format: date-time
+                  lastModified:
+                    type: string
+                    format: date-time
+                  location:
+                    type: string
+              id:
+                type: string
+              externalId:
+                type: string
+              active:
+                type: boolean
+              userName:
+                type: string
+              name:
+                type: object
+                properties:
+                  familyName:
+                    type: string
+                  givenName:
+                    type: string
+                  formatted:
+                    type: string
+              displayName:
+                type: string
+              entitlements:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    display:
+                      type: string
+                    value:
+                      type: string
+                    type:
+                      type: string
+    PostScim10V2UsersRequest:
+      type: object
+      properties:
+        schemas:
+          type: array
+        userName:
+          type: string
+        externalId:
+          type: string
+        active:
+          type: boolean
+        name:
+          type: object
+        displayName:
+          type: string
+        entitlements:
+          type: array
+      required:
+      - schemas
+      - userName
+      - name
+    PostScim10V2UsersResponse:
+      type: object
+      properties:
+        schemas:
+          type: array
+        id:
+          type: string
+        externalId:
+          type: string
+        active:
+          type: boolean
+        meta:
+          type: object
+        name:
+          type: object
+        displayName:
+          type: string
+        userName:
+          type: string
+        entitlements:
+          type: array
+    GetTokenAuthenticateResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+        statusMessage:
+          type: string
+          description: Status message
+        tokenInfo:
+          type: object
+          description: Token information including tokenId, tokenValue, expiresAt, refreshTokenId
+        meta:
+          type: object
+          description: Metadata including validationUrl
+    PostTokenAuthenticateResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            validationUrl:
+              type: string
+        status:
+          type: string
+        statusMessage:
+          type: string
+        tokenInfo:
+          type: object
+          properties:
+            expiresAt:
+              type: integer
+            tokenId:
+              type: string
+            tokenValue:
+              type: string
+            refreshTokenId:
+              type: string
+    GetTokenRefreshResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Status of the request
+        statusMessage:
+          type: string
+          description: Status message
+        tokenInfo:
+          type: object
+          description: Token information including tokenId, tokenValue, expiresAt, refreshTokenId
+        meta:
+          type: object
+          description: Metadata including validationUrl
+    PostTokenRefreshResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            validationUrl:
+              type: string
+        status:
+          type: string
+        statusMessage:
+          type: string
+        tokenInfo:
+          type: object
+          properties:
+            expiresAt:
+              type: integer
+            tokenId:
+              type: string
+            tokenValue:
+              type: string
+            refreshTokenId:
+              type: string
+    GetTokenValidateResponse:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            validationUrl:
+              type: string
+        status:
+          type: string
+        statusMessage:
+          type: string
+        tokenInfo:
+          type: object
+          properties:
+            expiresAt:
+              type: integer
+            tokenId:
+              type: string
+            tokenValue:
+              type: string
+            refreshTokenId:
+              type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+security:
+- apiKey: []
+tags:
+- name: '2'
+- name: Admin
+- name: Api
+- name: Audit
+- name: Events
+- name: Odata
+- name: Resourcetypes
+- name: Schemas
+- name: Scim
+- name: Serviceproviderconfig
+- name: Token
+- name: Users

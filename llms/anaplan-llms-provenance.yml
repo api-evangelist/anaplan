@@ -1,0 +1,6 @@
+generated: '2026-10-20'
+method: probed
+generator: harvest-llms.py
+source: https://www.anaplan.com/llms.txt
+bytes: 2984
+note: saved verbatim; the provider's own document

@@ -1,0 +1,6 @@
+name: Anaplan agent skills
+generated: '2026-10-20'
+method: generated
+skills:
+- name: anaplan-run-export
+  path: skills/anaplan-run-export.md

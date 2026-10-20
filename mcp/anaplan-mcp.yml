@@ -1,0 +1,11 @@
+name: Anaplan MCP server
+generated: '2026-10-20'
+method: searched
+source: https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76
+status: none
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+note: 'Anaplan publishes no MCP server. Its API hub states: "we have limited the ability for certain AI capabilities, technologies, or services, including (but not limited to) MCP servers, to utilize our published APIs." Pre-flight found status.anaplan.com/mcp answering 403 with an identical 403 control (opaque, not a server).'
+tools: []

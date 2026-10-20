@@ -1,0 +1,22 @@
+name: Anaplan packages
+generated: '2026-10-20'
+method: searched
+source: https://github.com/anaplaninc
+note: Searched the anaplaninc GitHub org, Maven Central (g:com.anaplan returned no artifacts), npm and PyPI. The only first-party client library is the Anaplan Java client, distributed as GitHub releases rather than through a registry. PyPI anaplan-sdk (valantic / Vinzenz Klass) and the npm n8n community node are third-party.
+packages:
+- name: anaplan-java-client
+  registry: github-releases
+  url: https://github.com/anaplaninc/anaplan-java-client
+  language: Java
+  official: true
+  version: v4.0.0
+  published: '2022-08-25'
+  note: Latest GitHub release tag v4.0.0 published 2022-08-25T11:08:20Z; not published to Maven Central.
+- name: anaplan-sdk
+  registry: pypi
+  url: https://pypi.org/project/anaplan-sdk/
+  language: Python
+  official: false
+  version: 0.5.22
+  published: null
+  note: Community SDK maintained by Vinzenz Klass (valantic), repository github.com/VinzenzKlass/anaplan-sdk; release date not read.

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/anaplan/main/json-schema/anaplan-get20-workspaces-workspaceid-models-response-schema.json",
+  "title": "Get20WorkspacesWorkspaceidModelsResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/anaplan-openapi-generated.yml#/components/schemas/Get20WorkspacesWorkspaceidModelsResponse",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "type": "string"
+        },
+        "paging": {
+          "type": "object",
+          "properties": {
+            "currentPageSize": {
+              "type": "integer"
+            },
+            "totalSize": {
+              "type": "integer"
+            },
+            "offset": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "activeState": {
+            "type": "string"
+          },
+          "lastSavedSerialNumber": {
+            "type": "integer"
+          },
+          "lastModifiedByUserGuid": {
+            "type": "string"
+          },
+          "memoryUsage": {
+            "type": "integer"
+          },
+          "currentWorkspaceId": {
+            "type": "string"
+          },
+          "currentWorkspaceName": {
+            "type": "string"
+          },
+          "modelUrl": {
+            "type": "string"
+          },
+          "categoryValues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "attribute": {
+                  "type": "string"
+                },
+                "categoryId": {
+                  "type": "string"
+                },
+                "categoryName": {
+                  "type": "string"
+                },
+                "customerId": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "isoCreationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

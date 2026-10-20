@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/anaplan/main/json-schema/anaplan-get-audit-api1-events-search-response-schema.json",
+  "title": "GetAuditApi1EventsSearchResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/anaplan-openapi-generated.yml#/components/schemas/GetAuditApi1EventsSearchResponse",
+  "type": "object",
+  "properties": {
+    "response": {
+      "type": "array",
+      "description": "Array of audit event objects"
+    },
+    "meta": {
+      "type": "object",
+      "description": "Metadata including paging information"
+    },
+    "id": {
+      "type": "integer",
+      "description": "Event ID"
+    },
+    "eventTypeId": {
+      "type": "string",
+      "description": "Event type identifier"
+    },
+    "userId": {
+      "type": "string",
+      "description": "User ID that performed the action"
+    },
+    "tenantId": {
+      "type": "string",
+      "description": "Tenant ID"
+    },
+    "message": {
+      "type": "string",
+      "description": "Event message"
+    },
+    "eventDate": {
+      "type": "integer",
+      "description": "Event date in milliseconds UTC"
+    }
+  }
+}
