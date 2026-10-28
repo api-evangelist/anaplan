@@ -1,4 +1,4 @@
-# Anaplan (anaplan)
+# Anaplan
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,64 +64,146 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Anaplan is a cloud-native connected planning platform used by enterprises for financial planning and analysis (FP&A), supply chain planning, and sales performance management. Its REST API allows integrators to import and export data, trigger model processes, and manage Anaplan workspaces programmatically. Beyond bulk data operations, Anaplan exposes dedicated APIs for financial consolidation, identity management via SCIM, audit event streaming, application lifecycle management, and CloudWorks custom integrations.
+Anaplan is a cloud-native connected planning platform used by enterprises for financial planning and analysis (FP&A), supply chain planning, and sales performance management. Its REST API (Integration API v2.0) allows integrators to import and export data, trigger model processes, and manage Anaplan workspaces programmatically. Beyond bulk data operations, Anaplan exposes dedicated APIs for financial consolidation, identity management via SCIM, audit event streaming, application lifecycle management, and CloudWorks custom integrations. All API access requires authentication via the Anaplan Authentication Service API, which issues tokens using username/password credentials or client certificates.
 
-APIs.json: https://raw.githubusercontent.com/api-evangelist/anaplan/refs/heads/main/apis.yml
+**Areas:** Connected Planning · Enterprise Planning · FP&A · Supply Chain · Sales Planning · Financial Consolidation · SCIM · REST
 
-Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=anaplan-api-evangelist&utm_content=repo
+## Anaplan on APIs.io
 
-## Tags
+Everything profiled for Anaplan is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/anaplan/](https://apis.io/providers/anaplan/)** — or go straight to one of the APIs or properties below.
 
-- Connected Planning
-- Enterprise Planning
-- FP&A
-- Supply Chain
-- Sales Planning
-- Financial Consolidation
-- SCIM
-- REST
+### APIs (10)
 
-## APIs
+- [Anaplan Integration API v2.0](https://apis.io/apis/anaplan/anaplan-integration-api-v2-0/) — RESTful bulk and transactional API for importing data, exporting results, running processes, and managing models within Anaplan workspaces.
+- [Anaplan Authentication Service API](https://apis.io/apis/anaplan/anaplan-authentication-service-api/) — Manages authentication token creation and refresh for accessing all other Anaplan APIs using username/password or client certificate credentials.
+- [Anaplan Financial Consolidation API](https://apis.io/apis/anaplan/anaplan-financial-consolidation-api/) — Controls workflows, manages security, and supports retrieval, insertion, update, and deletion of financial data and metadata for consolidation use cases.
+- [Anaplan SCIM API](https://apis.io/apis/anaplan/anaplan-scim-api/) — System for Cross-Domain Identity Management API for provisioning and managing user identities across multiple domains within the Anaplan platform.
+- [Anaplan CloudWorks API](https://apis.io/apis/anaplan/anaplan-cloudworks-api/) — Enables creation of custom connections and integrations between Anaplan and external data sources and systems through CloudWorks.
+- [Anaplan Audit API](https://apis.io/apis/anaplan/anaplan-audit-api/) — Tracks and streams audit events and security alerts for integration with Security Information and Event Management (SIEM) services.
+- [Anaplan Application Lifecycle Management API](https://apis.io/apis/anaplan/anaplan-application-lifecycle-management-api/) — Manage the development, testing, and deployment of Anaplan models (revisions, model sync) programmatically.
+- [Anaplan Exception Users API](https://apis.io/apis/anaplan/anaplan-exception-users-api/) — Manage which users have exception user access to workspaces within an Anaplan tenant.
+- [Anaplan Administration API](https://apis.io/apis/anaplan/anaplan-administration-api/) — Manage user details and settings at the administration level, including bulk user import and export endpoints.
+- [Anaplan API](https://apis.io/apis/anaplan/anaplan-api/) — Anaplan API as documented publicly: 129 operations. Contract generated from the documentation by API Evangelist (2026-10-20); not the provider's own document.
 
-| API | Description | Documentation |
-|-----|-------------|---------------|
-| Integration API v2.0 | RESTful bulk and transactional API for importing data, exporting results, running processes, and managing models | [Docs](https://help.anaplan.com/integration-api-v20-399496b0-d66e-4a84-895a-8d1ffdee2e6b) |
-| Authentication Service API | Manages authentication token creation and refresh for all Anaplan APIs | [Docs](https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76) |
-| Financial Consolidation API | Controls workflows and manages financial data and metadata for consolidation | [Docs](https://help.anaplan.com/anaplan-financial-consolidation-api-e83345d8-0509-4228-b532-679ee398a9d5) |
-| SCIM API | User identity provisioning and management across multiple domains | [Docs](https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76) |
-| CloudWorks API | Custom connections and integrations with external data sources | [Docs](https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76) |
-| Audit API | Audit event streaming for SIEM integration | [Docs](https://help.anaplan.com/anaplan-api-844c6d40-a21c-423d-8435-ebaaa0372b76) |
+### Published properties
 
-## Plans / Rate Limits / FinOps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Resource | File |
-|----------|------|
-| Plans & Pricing | [plans/anaplan-plans-pricing.yml](plans/anaplan-plans-pricing.yml) |
-| Rate Limits | [rate-limits/anaplan-rate-limits.yml](rate-limits/anaplan-rate-limits.yml) |
-| FinOps | [finops/anaplan-finops.yml](finops/anaplan-finops.yml) |
+#### JSON Schema (6)
 
-**Rate Limits:** 600 requests per minute at the tenant level (token bucket algorithm). HTTP 429 returned when exceeded. Retry-After header provided on throttled responses.
+The data models the API reads and writes.
 
-**Pricing:** Enterprise SaaS subscription, contact sales required. Entry-level from ~$30K/year; large enterprise deployments reach $1M+/year.
+- [GetAuditApi1EventsSearchResponse](https://apis.io/schemas/anaplan/anaplan-get-audit-api1-events-search-response/)
+- [GetScim10V2ServiceproviderconfigResponse](https://apis.io/schemas/anaplan/anaplan-get-scim10-v2-serviceproviderconfig-response/)
+- [Get20ModelsResponse](https://apis.io/schemas/anaplan/anaplan-get20-models-response/)
+- [Get20WorkspacesWorkspaceidModelsResponse](https://apis.io/schemas/anaplan/anaplan-get20-workspaces-workspaceid-models-response/)
+- [PostScim10V2UserResponse](https://apis.io/schemas/anaplan/anaplan-post-scim10-v2-user-response/)
+- [Post20IntegrationsIntegrationidScheduleRequest](https://apis.io/schemas/anaplan/anaplan-post20-integrations-integrationid-schedule-request/)
 
-## Timestamps
+#### JSON-LD (1)
 
-- Created: 2026-06-12
-- Modified: 2026-06-12
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [Anaplan Context](https://apis.io/jsonld/anaplan/anaplan-context/)
 
-| Type | URL |
-|------|-----|
-| Website | https://www.anaplan.com |
-| Documentation | https://help.anaplan.com |
-| GitHub Organization | https://github.com/anaplaninc |
-| LinkedIn | https://www.linkedin.com/company/anaplan |
-| Blog | https://www.anaplan.com/blog/ |
-| Pricing | https://www.anaplan.com/platform/ |
-| Status Page | https://status.anaplan.com/ |
-| X (Twitter) | https://x.com/anaplan |
+#### Governance rules (1)
 
-## Maintainers
+Spectral rulesets for the provider's contracts.
 
-- Kin Lane / kin@apievangelist.com
+- [Anaplan API Rules](https://apis.io/rules/anaplan/anaplan-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Anaplan Authentication](https://apis.io/security/anaplan/anaplan-authentication/)
+- [Anaplan Domain Security](https://apis.io/security/anaplan/anaplan-domain-security/)
+- [Anaplan Trust Center](https://apis.io/security/anaplan/anaplan-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Anaplan Plans Pricing](https://apis.io/plans/anaplan/anaplan-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Anaplan Rate Limits](https://apis.io/rate-limits/anaplan/anaplan-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Anaplan Finops](https://apis.io/finops/anaplan/anaplan-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.anaplan.com)
+- [Documentation](https://help.anaplan.com)
+- [API reference](https://anaplan.docs.apiary.io/)
+- [Pricing](https://www.anaplan.com/platform/)
+- [Support](https://support.anaplan.com/)
+- [Blog](https://www.anaplan.com/blog/)
+- [Security](https://www.anaplan.com/platform/security/)
+- [Compliance](https://trust.anaplan.com/)
+- [Terms of service](https://www.anaplan.com/terms-of-use/)
+- [Privacy policy](https://www.anaplan.com/privacy-policy)
+- [GitHub](https://github.com/anaplaninc)
+- [Status](https://status.anaplan.com/)
+
+## API Evangelist rating
+
+**Kin Score 57.2** — strong · rubric 0.24.0 · scored 2026-10-20
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 33.6 |
+| Contract governance | 79.1 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 61.2 |
+| Access clarity | 68.4 |
+
+**Agent readiness 35.5** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/anaplan/](https://apis.io/providers/anaplan/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Anaplan: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/anaplan/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
